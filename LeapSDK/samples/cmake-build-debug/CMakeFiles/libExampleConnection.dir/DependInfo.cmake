@@ -8,11 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/LeapSDK/samples/ExampleConnection.c" "CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj" "gcc" "CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj.d"
+  "C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/ExampleConnection.c" "CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj" "gcc" "CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj.d"
   )
 
-# Targets to which this target links which contain Fortran sources.
-set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+# Targets to which this target links.
+set(CMAKE_TARGET_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
