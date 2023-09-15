@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16.3"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "leapc_example",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CallbackSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CallbackSample-Debug-3b662246f62d890110e6.json",
+					"name" : "CallbackSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ImageSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ImageSample-Debug-019bc6855968b844ad80.json",
+					"name" : "ImageSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "InterpolationSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-InterpolationSample-Debug-6ebedbfce7c446cf3a30.json",
+					"name" : "InterpolationSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "MultiDeviceSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-MultiDeviceSample-Debug-98f7f47194a4c7b1cc39.json",
+					"name" : "MultiDeviceSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "PollingSample::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PollingSample-Debug-dcbe5450999bc50ace2f.json",
+					"name" : "PollingSample",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "leapc_example::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-leapc_example-Debug-516cc8bd893755763bfc.json",
+					"name" : "leapc_example",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "libExampleConnection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-libExampleConnection-Debug-634b2a313444475a7252.json",
+					"name" : "libExampleConnection",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/LeapSDK/samples/cmake-build-debug",
+		"source" : "C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/LeapSDK/samples"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}
