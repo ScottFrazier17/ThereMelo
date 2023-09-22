@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="leapc_example"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\cmake\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\cmake\LeapSDK\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\x64\;CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\x64\cmake\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leapc_example">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/leapc_example.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 leapc_example"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="leapc_example/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/leapc_example.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 leapc_example/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MultiDeviceSample">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/MultiDeviceSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 MultiDeviceSample"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="MultiDeviceSample/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/MultiDeviceSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 MultiDeviceSample/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libExampleConnection">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/libExampleConnection.dir/libExampleConnection.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 libExampleConnection"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="libExampleConnection/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/libExampleConnection.dir/libExampleConnection.objlib" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 libExampleConnection/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CallbackSample">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CallbackSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 CallbackSample"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="CallbackSample/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CallbackSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 CallbackSample/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageSample">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/ImageSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageSample"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ImageSample/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/ImageSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 ImageSample/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PollingSample">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/PollingSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 PollingSample"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PollingSample/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/PollingSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 PollingSample/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterpolationSample">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/InterpolationSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 InterpolationSample"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="InterpolationSample/fast">
+				<Option output="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/InterpolationSample.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples"/>
+					<Add directory="C:/Program Files/Ultraleap/LeapSDK/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="C:/Program Files/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 InterpolationSample/fast"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/JETBRA~1/CLION2~1.4/bin/mingw/bin/mingw32-make.exe -f &quot;C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/CallbackSample.c">
+			<Option target="CallbackSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/ExampleConnection.c">
+			<Option target="libExampleConnection"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/ExampleConnection.h">
+			<Option target="libExampleConnection"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/ImageSample.c">
+			<Option target="ImageSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/InterpolationSample.c">
+			<Option target="InterpolationSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/MultiDeviceSample.c">
+			<Option target="MultiDeviceSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/PollingSample.c">
+			<Option target="PollingSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/libExampleConnection.dir/ExampleConnection.c.obj">
+			<Option target="MultiDeviceSample"/>
+			<Option target="CallbackSample"/>
+			<Option target="ImageSample"/>
+			<Option target="PollingSample"/>
+			<Option target="InterpolationSample"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/leapc_main.c">
+			<Option target="leapc_example"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/../../../../../../../../../Program Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\cmake\LeapSDK\"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/../../../../../../../../../Program Files/Ultraleap/LeapSDK/lib/cmake/LeapSDK/leapsdk-configVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\cmake\LeapSDK\"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/../../../../../../../../../Program Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets-relwithdebinfo.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\x64\cmake\"/>
+		</Unit>
+		<Unit filename="C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/../../../../../../../../../Program Files/Ultraleap/LeapSDK/lib/x64/cmake/LeapCTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\..\..\Program Files\Ultraleap\LeapSDK\lib\x64\cmake\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

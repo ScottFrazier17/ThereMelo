@@ -1,0 +1,9 @@
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/leapc_example.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/MultiDeviceSample.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/libExampleConnection.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/CallbackSample.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/ImageSample.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/PollingSample.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/InterpolationSample.dir
+C:/Users/ronng/OneDrive/Desktop/Course/SeniorDesign/urban-spoon/LeapSDK/samples/cmake-build-debug/CMakeFiles/rebuild_cache.dir
