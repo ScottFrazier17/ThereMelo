@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<objects serializationModel="Studio.02.00.00">
+<objects serializationModel="Studio.02.02.00">
 	<object class="Event" id="{c4c4d1d9-1b03-46a7-af88-b88ab000ae4e}">
 		<property name="name">
 			<value>Theremin</value>
@@ -195,8 +195,8 @@
 			<destination>{1734cc50-e21e-44a8-9c80-8575a70a1c73}</destination>
 		</relationship>
 		<relationship name="automationPoints">
-			<destination>{6fd49007-07a0-4284-8789-8e7fa6f3a750}</destination>
 			<destination>{c111c19e-1044-49f3-a384-931146c191da}</destination>
+			<destination>{6fd49007-07a0-4284-8789-8e7fa6f3a750}</destination>
 			<destination>{59a98a04-fd1e-4c39-94fe-2ec6010008ca}</destination>
 		</relationship>
 	</object>
@@ -246,20 +246,20 @@
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{c5936d53-14a0-417a-a289-80e89107750f}" />
-	<object class="AutomationPoint" id="{6fd49007-07a0-4284-8789-8e7fa6f3a750}">
-		<property name="position">
-			<value>1</value>
-		</property>
-		<property name="value">
-			<value>-9.53674316e-07</value>
-		</property>
-	</object>
 	<object class="AutomationPoint" id="{c111c19e-1044-49f3-a384-931146c191da}">
 		<property name="position">
 			<value>0</value>
 		</property>
 		<property name="value">
 			<value>-24</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{6fd49007-07a0-4284-8789-8e7fa6f3a750}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>-9.53674316e-07</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{59a98a04-fd1e-4c39-94fe-2ec6010008ca}">
