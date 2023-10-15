@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ded4c62a-cc1c-41f7-95ea-ddc012d84115}">
+		<property name="assetPath">
+			<value>Sine-Tone-Loop.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>4.9956009070294787</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{a55a6665-135e-4bd0-8797-f1ae40c2e967}</destination>
+		</relationship>
+	</object>
+</objects>
