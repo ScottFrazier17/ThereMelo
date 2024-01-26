@@ -26,11 +26,18 @@ public class AudioHandler : MonoBehaviour
     }
 
     public void PlayAudioConstant() {
+        // check if event is already playing.
+        if (eventInstance.isValid()) { StopAudio(); }
+
+        // create
         eventInstance = AudioManager.instance.PlayConstaint(triggerSound, source.transform.position);
     }
 
     public void PlayForAmount(float setTime)
     {
+        if (eventInstance.isValid()) { StopAudio(); }
+
+        // create and play.
         eventInstance = AudioManager.instance.PlayConstaint(triggerSound, source.transform.position);
         StartCoroutine(StopSoundAfterDelay(setTime));
     }
