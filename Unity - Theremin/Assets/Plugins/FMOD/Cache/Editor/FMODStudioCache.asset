@@ -1,6 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6510168566756343875
+--- !u!114 &-8601643071372042240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Theremin/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 117200170
+    data2: 3297094454
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-8567465996588967417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,15 +34,59 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
+  m_Name: bank:/SFX.bank
   m_EditorClassIdentifier: 
-  Path: ../FMod/Theremin-Sound/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638416087372695762
+  Path: ../FMod/ThereMelo-Sounds/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638418762973590000
   FileSizes:
   - Name: Desktop
-    Value: 900
+    Value: 90368
+  Exists: 1
+--- !u!114 &-8014316140714348574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Theremin/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2494716924
+    data2: 3397179766
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-4508365076355425878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Instrument.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Instrument.bank
+  Name: Instrument
+  StudioPath: bank:/Instrument
+  lastModified: 638418762973590000
+  FileSizes:
+  - Name: Desktop
+    Value: 12768
   Exists: 1
 --- !u!114 &-4217958734853259387
 MonoBehaviour:
@@ -44,7 +112,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-3888953176730967433
+--- !u!114 &-3512342003398690211
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,7 +122,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Theremin/Volume
+  m_Name: parameter:/UI/Volume
   m_EditorClassIdentifier: 
   Name: Volume
   StudioPath: 
@@ -67,26 +135,6 @@ MonoBehaviour:
   Type: 0
   IsGlobal: 1
   Labels: []
-  Exists: 1
---- !u!114 &-3868595267897004967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../FMod/Theremin-Sound/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638416087372675769
-  FileSizes:
-  - Name: Desktop
-    Value: 1376
   Exists: 1
 --- !u!114 &-1563856547429115356
 MonoBehaviour:
@@ -107,13 +155,13 @@ MonoBehaviour:
     Data3: -1967617873
     Data4: 1320026288
   Banks:
-  - {fileID: 6053211763995339098}
+  - {fileID: -4508365076355425878}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3888953176730967433}
-  - {fileID: 3863003855700587268}
+  - {fileID: -8014316140714348574}
+  - {fileID: -8601643071372042240}
   MinDistance: 1
   MaxDistance: 20
   Length: 4995
@@ -130,21 +178,23 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -6510168566756343875}
-  - {fileID: -3868595267897004967}
-  - {fileID: 6053211763995339098}
+  - {fileID: 5711225379988126098}
+  - {fileID: -4508365076355425878}
+  - {fileID: 4059210713517914611}
+  - {fileID: -8567465996588967417}
   EditorEvents:
   - {fileID: -1563856547429115356}
+  - {fileID: 3495599379992739590}
   EditorParameters:
   - {fileID: 9146775767728088228}
   - {fileID: -4217958734853259387}
   MasterBanks:
-  - {fileID: -3868595267897004967}
+  - {fileID: 4059210713517914611}
   StringsBanks:
-  - {fileID: -6510168566756343875}
-  cacheTime: 638416087373561770
+  - {fileID: 5711225379988126098}
+  cacheTime: 638418762973590000
   cacheVersion: 131608
---- !u!114 &3863003855700587268
+--- !u!114 &3495599379992739590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,22 +203,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Theremin/Pitch
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI
   m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 117200170
-    data2: 3297094454
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &6053211763995339098
+  Path: event:/UI
+  Guid:
+    Data1: 274392921
+    Data2: 1304887481
+    Data3: -426185580
+    Data4: 1868826805
+  Banks:
+  - {fileID: -8567465996588967417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -3512342003398690211}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8000
+--- !u!114 &4059210713517914611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,15 +232,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
+  m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../FMod/Theremin-Sound/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638416087373561770
+  Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638418762973590000
   FileSizes:
   - Name: Desktop
-    Value: 12800
+    Value: 1376
+  Exists: 1
+--- !u!114 &5711225379988126098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638418762973590000
+  FileSizes:
+  - Name: Desktop
+    Value: 986
   Exists: 1
 --- !u!114 &9146775767728088228
 MonoBehaviour:

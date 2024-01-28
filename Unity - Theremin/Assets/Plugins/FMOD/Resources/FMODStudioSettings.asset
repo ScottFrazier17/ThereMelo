@@ -359,8 +359,8 @@ MonoBehaviour:
   switchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../FMod/Theremin-Sound/Theremin-Sound.fspro
-  sourceBankPath: ../FMod/Theremin-Sound/Build
+  sourceProjectPath: ../FMod/ThereMelo-Sounds/ThereMelo-Sounds.fspro
+  sourceBankPath: ../FMod/ThereMelo-Sounds/Build
   sourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1
@@ -384,6 +384,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Instrument
   - SFX
   BanksToLoad: []
   LiveUpdatePort: 9264
