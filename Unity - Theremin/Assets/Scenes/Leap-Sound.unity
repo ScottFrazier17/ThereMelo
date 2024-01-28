@@ -661,8 +661,56 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1215053202}
+  - {fileID: 408568099}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &408568098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408568099}
+  - component: {fileID: 408568100}
+  m_Layer: 0
+  m_Name: Hand Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &408568099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408568098}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 360540273}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &408568100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408568098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4d1c378d26d2b47a94d4d52bfca923, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leapProvider: {fileID: 1126683334}
+  volumeObj: {fileID: 1183985813}
+  pitchObj: {fileID: 1922563119}
 --- !u!1 &514711738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1991,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 581434632}
     m_Modifications:
+    - target: {fileID: 3027598717288697647, guid: 1041cd64197609540b111ad788805542, type: 3}
+      propertyPath: _leapProvider
+      value: 
+      objectReference: {fileID: 1126683334}
+    - target: {fileID: 3029561150037234287, guid: 1041cd64197609540b111ad788805542, type: 3}
+      propertyPath: _leapProvider
+      value: 
+      objectReference: {fileID: 1126683334}
     - target: {fileID: 3138176846596184247, guid: 1041cd64197609540b111ad788805542, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.05629701
@@ -2237,7 +2293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1c4fd480beb70da44bdd2093df5f2b0d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1c4fd480beb70da44bdd2093df5f2b0d, type: 3}
       propertyPath: m_LocalPosition.z
