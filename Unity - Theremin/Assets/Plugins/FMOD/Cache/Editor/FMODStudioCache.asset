@@ -21,7 +21,7 @@ MonoBehaviour:
     data1: 117200170
     data2: 3297094454
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &-8567465996588967417
@@ -39,10 +39,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638418762973590000
+  lastModified: 638428347572280250
   FileSizes:
   - Name: Desktop
-    Value: 90368
+    Value: 104544
   Exists: 1
 --- !u!114 &-8014316140714348574
 MonoBehaviour:
@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Theremin/Volume
+  m_Name: parameter:/Theremin/MasterVolume
   m_EditorClassIdentifier: 
-  Name: Volume
+  Name: MasterVolume
   StudioPath: 
   Min: 0
   Max: 1
@@ -83,10 +83,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Instrument.bank
   Name: Instrument
   StudioPath: bank:/Instrument
-  lastModified: 638418762973590000
+  lastModified: 638428347568853145
   FileSizes:
   - Name: Desktop
-    Value: 12768
+    Value: 13376
   Exists: 1
 --- !u!114 &-4217958734853259387
 MonoBehaviour:
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Volume
+  m_Name: parameter:/MasterVolume
   m_EditorClassIdentifier: 
-  Name: Volume
-  StudioPath: parameter:/Volume
+  Name: MasterVolume
+  StudioPath: parameter:/MasterVolume
   Min: 0
   Max: 1
   Default: 0
@@ -122,9 +122,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/UI/Volume
+  m_Name: parameter:/UI/MasterVolume
   m_EditorClassIdentifier: 
-  Name: Volume
+  Name: MasterVolume
   StudioPath: 
   Min: 0
   Max: 1
@@ -162,6 +162,7 @@ MonoBehaviour:
   Parameters:
   - {fileID: -8014316140714348574}
   - {fileID: -8601643071372042240}
+  - {fileID: 6804854097593770469}
   MinDistance: 1
   MaxDistance: 20
   Length: 4995
@@ -186,13 +187,12 @@ MonoBehaviour:
   - {fileID: -1563856547429115356}
   - {fileID: 3495599379992739590}
   EditorParameters:
-  - {fileID: 9146775767728088228}
   - {fileID: -4217958734853259387}
   MasterBanks:
   - {fileID: 4059210713517914611}
   StringsBanks:
   - {fileID: 5711225379988126098}
-  cacheTime: 638418762973590000
+  cacheTime: 638428347572280250
   cacheVersion: 131608
 --- !u!114 &3495599379992739590
 MonoBehaviour:
@@ -214,14 +214,14 @@ MonoBehaviour:
     Data4: 1868826805
   Banks:
   - {fileID: -8567465996588967417}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
   - {fileID: -3512342003398690211}
   MinDistance: 1
   MaxDistance: 20
-  Length: 8000
+  Length: 17454
 --- !u!114 &4059210713517914611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,10 +237,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638418762973590000
+  lastModified: 638428347568960931
   FileSizes:
   - Name: Desktop
-    Value: 1376
+    Value: 1224
   Exists: 1
 --- !u!114 &5711225379988126098
 MonoBehaviour:
@@ -257,12 +257,12 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638418762973590000
+  lastModified: 638428347568980989
   FileSizes:
   - Name: Desktop
-    Value: 986
+    Value: 1028
   Exists: 1
---- !u!114 &9146775767728088228
+--- !u!114 &6804854097593770469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,17 +272,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Pitch
+  m_Name: parameter:/Theremin/Volume
   m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: parameter:/Pitch
+  Name: Volume
+  StudioPath: 
   Min: 0
-  Max: 2
+  Max: 1
   Default: 0
   ID:
-    data1: 117200170
-    data2: 3297094454
+    data1: 3215818853
+    data2: 3345806298
   Type: 0
-  IsGlobal: 1
+  IsGlobal: 0
   Labels: []
   Exists: 1
