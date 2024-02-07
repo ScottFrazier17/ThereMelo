@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
-using FMOD.Studio;
-using static UnityEngine.Rendering.DebugUI;
 
 public class AudioManager : MonoBehaviour
 {

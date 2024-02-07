@@ -10,7 +10,7 @@ public class HandManager : MonoBehaviour
     public GameObject volumeObj;
     public GameObject pitchObj;
 
-    private bool isPlaying;
+    private bool isPlaying = false;
     private StudioEventEmitter audioManagerEmitter;
     // Singleton instance
     public static HandManager instance { get; private set; }
@@ -47,20 +47,27 @@ public class HandManager : MonoBehaviour
         Hand _rightHand = frame.GetHand(Chirality.Right);
         if (_leftHand != null && _rightHand != null) {
             if (!isPlaying) {
+                isPlaying = true;
                 audioManagerEmitter.Play();
+                Debug.Log("playing");
             }
             float v = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
             float p = Vector3.Distance(_rightHand.PalmPosition, pitchObj.transform.position);
            
             audioManagerEmitter.EventInstance.setParameterByName("Volume", v);
-            audioManagerEmitter.EventInstance.setParameterByName("Pitch", p);
-            Debug.Log("Vol: " + v);
-            Debug.Log("Pitch: " + p);
+            audioManagerEmitter.EventInstance.setParameterByName("Pitch", p*2);
+
+            audioManagerEmitter.EventInstance.getParameterByName("Volume", out float a);
+            audioManagerEmitter.EventInstance.getParameterByName("Pitch", out float t);
+            Debug.Log("Vol: " + v + " | " + a);
+            Debug.Log("Pitch: " + p + " | " + t);
         }
-        else
+        else if(isPlaying)
         {
             // stop theremin sound.
+            isPlaying = false;
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            Debug.Log("stopping");
         }
     }
 
