@@ -5,14 +5,18 @@ using FMODUnity;
 using System.Runtime.InteropServices;
 using System;
 using FMOD;
+using Leap.Unity;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
+    public GameObject handManagement;
 
-    private FMOD.System system;
-    private FMOD.DSP fftDsp;
-    private FMOD.ChannelGroup channelGroup;
+    private DSP fftDsp;
+    private ChannelGroup channelGroup;
+    private float freq = 3f;
+    private Coroutine thread = null;
+    private HandManager script;
 
     private void Awake()
     {
@@ -22,18 +26,48 @@ public class AudioManager : MonoBehaviour
         }
         instance = this;
 
-        // start fft dsp.
+        // start fft dsp. TODO : make it toggle on hand appearance.
         RuntimeManager.CoreSystem.getMasterChannelGroup(out channelGroup);
-        RuntimeManager.CoreSystem.createDSPByType(FMOD.DSP_TYPE.FFT, out fftDsp);
-        fftDsp.setParameterInt((int)FMOD.DSP_FFT.WINDOWTYPE, (int)FMOD.DSP_FFT_WINDOW.HANNING);
-        fftDsp.setParameterInt((int)FMOD.DSP_FFT.WINDOWSIZE, 1024 * 2); // Window size for FFT
-        channelGroup.addDSP(FMOD.CHANNELCONTROL_DSP_INDEX.HEAD, fftDsp);
+        RuntimeManager.CoreSystem.createDSPByType(DSP_TYPE.FFT, out fftDsp);
+        fftDsp.setParameterInt((int)DSP_FFT.WINDOWTYPE, (int)DSP_FFT_WINDOW.HANNING);
+        fftDsp.setParameterInt((int)DSP_FFT.WINDOWSIZE, 1024 * 2); // Window size for FFT
+        channelGroup.addDSP(CHANNELCONTROL_DSP_INDEX.HEAD, fftDsp);
 
         fftDsp.setActive(true);
+        StartCoroutine(FFTAnalysisCoroutine());
     }
+
     void Update()
     {
-        // fft dataa
+        script = handManagement.GetComponent<HandManager>();
+        if (script.handsEnabled && thread != null)
+        {
+            thread = StartCoroutine(FFTAnalysisCoroutine());
+        }
+        else if (!script.handsEnabled && thread != null)
+        {
+            UnityEngine.Debug.Log("Stopping Thread");
+            StopCoroutine(thread);
+            thread = null;
+        }
+    }
+
+
+    private IEnumerator FFTAnalysisCoroutine()
+    {
+        HandManager script = handManagement.GetComponent<HandManager>();
+        while (true)
+        {
+            if (script.handsEnabled)
+            {
+                FFTAnalysis();
+            }
+            yield return new WaitForSeconds(1f / freq);
+        }
+    }
+    void FFTAnalysis()
+    {
+        //fft dataa
         IntPtr unmanagedData;
         uint length;
         fftDsp.getParameterData((int)FMOD.DSP_FFT.SPECTRUMDATA, out unmanagedData, out length);
@@ -58,7 +92,7 @@ public class AudioManager : MonoBehaviour
             float frequency = maxIndex * sampleRate / (float)fft.length;
             UnityEngine.Debug.Log("Detected Frequency: " + frequency + " Hz");
 
-            // convert frequency to musical note later
+            //convert frequency to musical note later
         }
     }
     public void PlayOneShot(EventReference sound, Vector3 worldPos)

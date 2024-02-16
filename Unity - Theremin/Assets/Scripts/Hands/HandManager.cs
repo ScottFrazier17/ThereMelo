@@ -10,6 +10,8 @@ public class HandManager : MonoBehaviour
     public GameObject volumeObj;
     public GameObject pitchObj;
 
+    public bool handsEnabled;
+
     private bool isPlaying = false;
     private StudioEventEmitter audioManagerEmitter;
     // Singleton instance
@@ -47,6 +49,7 @@ public class HandManager : MonoBehaviour
         Hand _rightHand = frame.GetHand(Chirality.Right);
         if (_leftHand != null && _rightHand != null) {
             if (!isPlaying) {
+                handsEnabled = true;
                 isPlaying = true;
                 audioManagerEmitter.Play();
                 Debug.Log("playing");
@@ -59,15 +62,19 @@ public class HandManager : MonoBehaviour
 
             audioManagerEmitter.EventInstance.getParameterByName("Volume", out float a);
             audioManagerEmitter.EventInstance.getParameterByName("Pitch", out float t);
-            Debug.Log("Vol: " + v + " | " + a);
-            Debug.Log("Pitch: " + p + " | " + t);
+            //Debug.Log("Vol: " + v + " | " + a);
+            //Debug.Log("Pitch: " + p + " | " + t);
         }
-        else if(isPlaying)
+        else if (isPlaying)
         {
-            // stop theremin sound.
+            // stop theremin sound. TODO : seperate into its seperate function.
             isPlaying = false;
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("stopping");
+        }
+        else if (handsEnabled)
+        {
+            handsEnabled = false;
         }
     }
 
