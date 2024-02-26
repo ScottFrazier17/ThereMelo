@@ -1,3 +1,4 @@
+using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using UnityEngine;
@@ -52,5 +53,4 @@ public class AudioHandler : MonoBehaviour
         // Stop the event
         StopAudio();
     }
-
 }
