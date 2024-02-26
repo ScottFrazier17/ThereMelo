@@ -1,6 +1,7 @@
 using Leap.Unity;
 using UnityEngine;
 using Leap;
+using System.Collections.Generic;
 using FMODUnity;
 using FMOD.Studio;
 
@@ -54,16 +55,29 @@ public class HandManager : MonoBehaviour
                 audioManagerEmitter.Play();
                 Debug.Log("playing");
             }
-            float v = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
-            float p = Vector3.Distance(_rightHand.PalmPosition, pitchObj.transform.position);
-           
-            audioManagerEmitter.EventInstance.setParameterByName("Volume", v);
-            audioManagerEmitter.EventInstance.setParameterByName("Pitch", p*2);
+            float pDis = Vector3.Distance(_rightHand.PalmPosition, pitchObj.transform.position);
+            float vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
 
-            audioManagerEmitter.EventInstance.getParameterByName("Volume", out float a);
-            audioManagerEmitter.EventInstance.getParameterByName("Pitch", out float t);
-            //Debug.Log("Vol: " + v + " | " + a);
-            //Debug.Log("Pitch: " + p + " | " + t);
+            // get fingers
+            foreach (Finger finger in _rightHand.Fingers) {
+                float currentPos = Vector3.Distance(finger.TipPosition, pitchObj.transform.position);
+                if (currentPos < pDis)
+                {
+                    pDis = currentPos;
+                    Debug.Log("Closest Finger: " + finger.Type);
+                }
+            }
+
+            float volumeValue = vDis;
+            float pitchValue = (1 / (pDis * 2)) - 1;
+
+            audioManagerEmitter.EventInstance.setParameterByName("Volume", volumeValue);
+            audioManagerEmitter.EventInstance.setParameterByName("Pitch", pitchValue);
+
+            //audioManagerEmitter.EventInstance.getParameterByName("Volume", out float a);
+            //audioManagerEmitter.EventInstance.getParameterByName("Pitch", out float t);
+            //Debug.Log("Vol: " + volumeValue + " | " + a);
+            //Debug.Log("Pitch: " + pitchValue + " | " + t);
         }
         else if (isPlaying)
         {
