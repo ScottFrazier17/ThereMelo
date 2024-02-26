@@ -229,6 +229,7 @@
 		<relationship name="automationPoints">
 			<destination>{c111c19e-1044-49f3-a384-931146c191da}</destination>
 			<destination>{59a98a04-fd1e-4c39-94fe-2ec6010008ca}</destination>
+			<destination>{20a0ce9e-dc33-4f7e-84f7-6b610bf271bb}</destination>
 		</relationship>
 	</object>
 	<object class="AutomationCurve" id="{643818a2-318d-4255-b35f-1e46dfd2cdf9}">
@@ -241,29 +242,13 @@
 		</relationship>
 	</object>
 	<object class="MixerBusFader" id="{50c33ee5-d1b5-4e45-b366-0d0704810440}" />
-	<object class="CompressorEffect" id="{1f2b77a9-ab62-41a9-a383-c8707e124e32}">
-		<property name="ratio">
-			<value>1.95000005</value>
-		</property>
-		<property name="attackTime">
-			<value>4</value>
-		</property>
-	</object>
+	<object class="CompressorEffect" id="{1f2b77a9-ab62-41a9-a383-c8707e124e32}" />
 	<object class="MultibandEqEffect" id="{be157d5e-aa0f-4bd7-b1f3-286d77703753}">
-		<property name="filterTypeB">
-			<value>1</value>
-		</property>
 		<property name="frequencyA">
-			<value>380</value>
-		</property>
-		<property name="frequencyB">
-			<value>8841.00391</value>
+			<value>486.13089</value>
 		</property>
 		<property name="qualityA">
-			<value>0.680000007</value>
-		</property>
-		<property name="qualityB">
-			<value>0.100000001</value>
+			<value>0.330241382</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{c0d671d9-9aa6-4881-9914-84f587b8119c}">
@@ -315,10 +300,18 @@
 	</object>
 	<object class="AutomationPoint" id="{59a98a04-fd1e-4c39-94fe-2ec6010008ca}">
 		<property name="position">
-			<value>1.5</value>
+			<value>1.9967159277504105</value>
 		</property>
 		<property name="value">
 			<value>24</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{20a0ce9e-dc33-4f7e-84f7-6b610bf271bb}">
+		<property name="position">
+			<value>1</value>
+		</property>
+		<property name="value">
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{b1558dac-5bb5-4f6b-84bd-596fbcea1795}">
