@@ -83,10 +83,14 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Instrument.bank
   Name: Instrument
   StudioPath: bank:/Instrument
+<<<<<<< Updated upstream
   lastModified: 638428375030961792
+=======
+  lastModified: 638445546955474727
+>>>>>>> Stashed changes
   FileSizes:
   - Name: Desktop
-    Value: 13376
+    Value: 13344
   Exists: 1
 --- !u!114 &-4217958734853259387
 MonoBehaviour:
@@ -192,7 +196,11 @@ MonoBehaviour:
   - {fileID: 4059210713517914611}
   StringsBanks:
   - {fileID: 5711225379988126098}
+<<<<<<< Updated upstream
   cacheTime: 638430742544597567
+=======
+  cacheTime: 638445546955474727
+>>>>>>> Stashed changes
   cacheVersion: 131608
 --- !u!114 &3495599379992739590
 MonoBehaviour:
