@@ -64,7 +64,7 @@ public class HandManager : MonoBehaviour
                 if (currentPos < pDis)
                 {
                     pDis = currentPos;
-                    Debug.Log("Closest Finger: " + finger.Type);
+                    //Debug.Log("Closest Finger: " + finger.Type);
                 }
             }
 

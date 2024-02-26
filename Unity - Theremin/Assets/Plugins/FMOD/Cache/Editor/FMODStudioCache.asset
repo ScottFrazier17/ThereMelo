@@ -39,10 +39,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638430222307895315
+  lastModified: 638445601119640315
   FileSizes:
   - Name: Desktop
-    Value: 119232
+    Value: 118656
   Exists: 1
 --- !u!114 &-8014316140714348574
 MonoBehaviour:
@@ -83,7 +83,7 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Instrument.bank
   Name: Instrument
   StudioPath: bank:/Instrument
-  lastModified: 638445569277199865
+  lastModified: 638445601119178123
   FileSizes:
   - Name: Desktop
     Value: 13376
@@ -192,7 +192,7 @@ MonoBehaviour:
   - {fileID: 4059210713517914611}
   StringsBanks:
   - {fileID: 5711225379988126098}
-  cacheTime: 638445569277199865
+  cacheTime: 638445601119640315
   cacheVersion: 131608
 --- !u!114 &3495599379992739590
 MonoBehaviour:
@@ -216,7 +216,7 @@ MonoBehaviour:
   - {fileID: -8567465996588967417}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters:
   - {fileID: -3512342003398690211}
   MinDistance: 1
