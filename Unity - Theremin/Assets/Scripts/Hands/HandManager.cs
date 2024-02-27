@@ -11,9 +11,12 @@ public class HandManager : MonoBehaviour
     public GameObject volumeObj;
     public GameObject pitchObj;
 
-    public bool handsEnabled;
+    public bool movingPad = false;
+    public bool movingRod = false;
+    public bool menuEnabled = false;
+    public bool isPlaying;
 
-    private bool isPlaying = false;
+    private bool movingObject => movingRod || movingRod;
     private StudioEventEmitter audioManagerEmitter;
     // Singleton instance
     public static HandManager instance { get; private set; }
@@ -48,9 +51,8 @@ public class HandManager : MonoBehaviour
         //Use a helpful utility function to get the first hand that matches the Chirality
         Hand _leftHand = frame.GetHand(Chirality.Left);
         Hand _rightHand = frame.GetHand(Chirality.Right);
-        if (_leftHand != null && _rightHand != null) {
+        if ((_leftHand != null && _rightHand != null) && !(menuEnabled || movingObject)){
             if (!isPlaying) {
-                handsEnabled = true;
                 isPlaying = true;
                 audioManagerEmitter.Play();
                 Debug.Log("playing");
@@ -64,7 +66,6 @@ public class HandManager : MonoBehaviour
                 if (currentPos < pDis)
                 {
                     pDis = currentPos;
-                    //Debug.Log("Closest Finger: " + finger.Type);
                 }
             }
 
@@ -74,10 +75,6 @@ public class HandManager : MonoBehaviour
             audioManagerEmitter.EventInstance.setParameterByName("Volume", volumeValue);
             audioManagerEmitter.EventInstance.setParameterByName("Pitch", pitchValue);
 
-            //audioManagerEmitter.EventInstance.getParameterByName("Volume", out float a);
-            //audioManagerEmitter.EventInstance.getParameterByName("Pitch", out float t);
-            //Debug.Log("Vol: " + volumeValue + " | " + a);
-            //Debug.Log("Pitch: " + pitchValue + " | " + t);
         }
         else if (isPlaying)
         {
@@ -86,14 +83,12 @@ public class HandManager : MonoBehaviour
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("stopping");
         }
-        else if (handsEnabled)
-        {
-            handsEnabled = false;
-        }
     }
 
-    // get hand.
-    public float getDistance(GameObject obj1, GameObject obj2) {
-        return Vector3.Distance(obj1.transform.position, obj2.transform.position);
-    }
+    // setters.
+    public void setMenuBoolean(bool x) { menuEnabled = x; }
+
+    public void setMovePad(bool x) { movingPad = x; }
+
+    public void setMoveRod(bool x) { movingRod = x; }
 }

@@ -9,6 +9,8 @@ public class MenuHandler : MonoBehaviour
     private Coroutine currentThread;
     private float dur = 0.075f;
 
+    public HandManager handManager;
+
     private float easeInSine(float x) 
     {
         return 1 - Mathf.Cos((x * Mathf.PI) / 2);

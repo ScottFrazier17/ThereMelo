@@ -40,11 +40,11 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
         script = handManagement.GetComponent<HandManager>();
-        if (script.handsEnabled && thread != null)
+        if (script.isPlaying && thread != null)
         {
             thread = StartCoroutine(FFTAnalysisCoroutine());
         }
-        else if (!script.handsEnabled && thread != null)
+        else if (!script.isPlaying && thread != null)
         {
             UnityEngine.Debug.Log("Stopping Thread");
             StopCoroutine(thread);
@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
         HandManager script = handManagement.GetComponent<HandManager>();
         while (true)
         {
-            if (script.handsEnabled)
+            if (script.isPlaying)
             {
                 FFTAnalysis();
             }
