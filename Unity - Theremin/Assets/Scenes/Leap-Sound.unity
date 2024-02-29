@@ -5343,6 +5343,10 @@ PrefabInstance:
       propertyPath: _horizontalSlideEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3287841047873008883, guid: 4baa4399ad48b744d8b4b0440c605781, type: 3}
+      propertyPath: rends.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4759502809069492374, guid: 4baa4399ad48b744d8b4b0440c605781, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.23658454
