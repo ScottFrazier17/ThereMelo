@@ -16,7 +16,7 @@ public class HandManager : MonoBehaviour
     public bool menuEnabled = false;
     public bool isPlaying;
 
-    private bool movingObject => movingRod || movingRod;
+    private bool movingObject => movingPad || movingRod;
     private StudioEventEmitter audioManagerEmitter;
     // Singleton instance
     public static HandManager instance { get; private set; }
@@ -47,6 +47,25 @@ public class HandManager : MonoBehaviour
         leapProvider.OnUpdateFrame -= OnUpdateFrame;
     }
 
+    private float calcClosest(Hand hand, GameObject targetObj)
+    {
+        float palmDis = (hand.PalmPosition - targetObj.transform.position).sqrMagnitude;
+
+        float minDis = palmDis; // start with dist from palm as default.
+
+        // get fingers
+        foreach (Finger fingerTip in hand.Fingers)
+        {
+            float fingerDis = (fingerTip.TipPosition - targetObj.transform.position).sqrMagnitude;
+            if (fingerDis < minDis)
+            {
+                minDis = fingerDis;
+            }
+        }
+
+        return Mathf.Sqrt(minDis);
+    }
+
     void OnUpdateFrame(Frame frame) {
         //Use a helpful utility function to get the first hand that matches the Chirality
         Hand _leftHand = frame.GetHand(Chirality.Left);
@@ -57,17 +76,8 @@ public class HandManager : MonoBehaviour
                 audioManagerEmitter.Play();
                 Debug.Log("playing");
             }
-            float pDis = Vector3.Distance(_rightHand.PalmPosition, pitchObj.transform.position);
+            float pDis = calcClosest(_rightHand, pitchObj);
             float vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
-
-            // get fingers
-            foreach (Finger finger in _rightHand.Fingers) {
-                float currentPos = Vector3.Distance(finger.TipPosition, pitchObj.transform.position);
-                if (currentPos < pDis)
-                {
-                    pDis = currentPos;
-                }
-            }
 
             float volumeValue = vDis;
             float pitchValue = (1 / (pDis * 2)) - 1;
@@ -78,7 +88,7 @@ public class HandManager : MonoBehaviour
         }
         else if (isPlaying)
         {
-            // stop theremin sound. TODO : seperate into its seperate function.
+            // stop theremin sound.
             isPlaying = false;
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             Debug.Log("stopping");

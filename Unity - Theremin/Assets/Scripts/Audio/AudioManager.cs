@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System;
 using FMOD;
 using Leap.Unity;
+using UnityEditor.Experimental.GraphView;
 
 public class AudioManager : MonoBehaviour
 {
@@ -14,64 +15,92 @@ public class AudioManager : MonoBehaviour
 
     private DSP fftDsp;
     private ChannelGroup channelGroup;
-    private float freq = 3f;
+    private float yieldFreq = 3f;
     private Coroutine thread = null;
+    private bool wasPlaying = false;
     private HandManager script;
+
+    private float currMagnitude = 0f;
 
     private void Awake()
     {
         if (instance != null)
         {
             UnityEngine.Debug.LogError("Multiple Audio Testers in Scene.");
+            Destroy(gameObject);
+            return;
         }
         instance = this;
 
-        // start fft dsp. TODO : make it toggle on hand appearance.
+        // set script
+        script = handManagement.GetComponent<HandManager>();
+
+        // start fft dsp.
         RuntimeManager.CoreSystem.getMasterChannelGroup(out channelGroup);
         RuntimeManager.CoreSystem.createDSPByType(DSP_TYPE.FFT, out fftDsp);
         fftDsp.setParameterInt((int)DSP_FFT.WINDOWTYPE, (int)DSP_FFT_WINDOW.HANNING);
-        fftDsp.setParameterInt((int)DSP_FFT.WINDOWSIZE, 1024 * 2); // Window size for FFT
+        fftDsp.setParameterInt((int)DSP_FFT.WINDOWSIZE, 2048); // Window size for FFT
         channelGroup.addDSP(CHANNELCONTROL_DSP_INDEX.HEAD, fftDsp);
 
         fftDsp.setActive(true);
-        StartCoroutine(FFTAnalysisCoroutine());
     }
 
     void Update()
     {
-        script = handManagement.GetComponent<HandManager>();
-        if (script.isPlaying && thread != null)
+        if (script.isPlaying && !wasPlaying)
         {
-            thread = StartCoroutine(FFTAnalysisCoroutine());
+            if (thread == null)
+            {
+                thread = StartCoroutine(FFTAnalysisCoroutine());
+                UnityEngine.Debug.Log(thread);
+            }
+            wasPlaying= true;
         }
-        else if (!script.isPlaying && thread != null)
+        else if (!script.isPlaying && wasPlaying)
         {
-            UnityEngine.Debug.Log("Stopping Thread");
-            StopCoroutine(thread);
-            thread = null;
+            if (thread != null)
+            {
+                UnityEngine.Debug.Log("Stopping Thread");
+                StopCoroutine(thread);
+                thread = null;
+
+                currMagnitude = 0f; // set Mag to zero.
+            }
+            wasPlaying = false;
         }
     }
 
 
     private IEnumerator FFTAnalysisCoroutine()
     {
-        HandManager script = handManagement.GetComponent<HandManager>();
-        while (true)
+        UnityEngine.Debug.Log("start Thread");
+        while (script.isPlaying)
         {
-            if (script.isPlaying)
-            {
-                FFTAnalysis();
-            }
-            yield return new WaitForSeconds(1f / freq);
+            FFTAnalysis();
+            yield return new WaitForSeconds(1f / yieldFreq);
         }
     }
+
+    private Tuple<string, int> getNote(float freq)
+    {
+        if (freq == 0f) { return new Tuple<string, int>("?", 0); }
+        string[] NOTES = { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
+
+        double noteNumber = 12 * Math.Log(freq / 440, 2) + 49;
+        noteNumber = Math.Round(noteNumber);
+        string note = NOTES[(int)(noteNumber) % NOTES.Length];
+        int octave = (int)((noteNumber + 8) / NOTES.Length);
+
+        return new Tuple<string, int>(note, octave);
+    }
+
     void FFTAnalysis()
     {
         //fft dataa
-        IntPtr unmanagedData;
+        IntPtr unmanagedData; 
         uint length;
-        fftDsp.getParameterData((int)FMOD.DSP_FFT.SPECTRUMDATA, out unmanagedData, out length);
-        FMOD.DSP_PARAMETER_FFT fft = (FMOD.DSP_PARAMETER_FFT)System.Runtime.InteropServices.Marshal.PtrToStructure(unmanagedData, typeof(FMOD.DSP_PARAMETER_FFT));
+        fftDsp.getParameterData((int)DSP_FFT.SPECTRUMDATA, out unmanagedData, out length);
+        DSP_PARAMETER_FFT fft = (DSP_PARAMETER_FFT)Marshal.PtrToStructure(unmanagedData, typeof(DSP_PARAMETER_FFT));
 
         if (fft.numchannels > 0)
         {
@@ -89,12 +118,40 @@ public class AudioManager : MonoBehaviour
             }
             int sampleRate;
             RuntimeManager.CoreSystem.getSoftwareFormat(out sampleRate, out _, out _);
-            float frequency = maxIndex * sampleRate / (float)fft.length;
+
+            float frequency;
+            if (maxIndex > 0 && maxIndex < fft.length - 1)
+            {
+                float leftMagnitude = fft.spectrum[0][maxIndex - 1];
+                float rightMagnitude = fft.spectrum[0][maxIndex + 1];
+                float peakMagnitude = maxMagnitude;
+
+                float interpolatedIndex = maxIndex + (leftMagnitude - rightMagnitude) / (2 * (2 * peakMagnitude - leftMagnitude - rightMagnitude));
+                frequency = interpolatedIndex * sampleRate / (float)fft.length;
+            }
+            else
+            {
+                // handle the case where maxIndex is at the array boundary
+                frequency = maxIndex * sampleRate / (float)fft.length;
+            }
+
             UnityEngine.Debug.Log("Detected Frequency: " + frequency + " Hz");
 
-            //convert frequency to musical note later
+            // convert frequency to musical note
+            var (note, octave) = getNote(frequency);
+            UnityEngine.Debug.Log("Note: " + note + " Octave : " + octave);
+
+            // for speakers.
+            currMagnitude = maxMagnitude;
         }
     }
+
+    // public getters
+    public float getMagnitude()
+    {
+        return currMagnitude;
+    }
+
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         // plays audio once
