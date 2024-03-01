@@ -52,7 +52,6 @@ public class AudioManager : MonoBehaviour
             if (thread == null)
             {
                 thread = StartCoroutine(FFTAnalysisCoroutine());
-                UnityEngine.Debug.Log(thread);
             }
             wasPlaying= true;
         }
@@ -73,7 +72,6 @@ public class AudioManager : MonoBehaviour
 
     private IEnumerator FFTAnalysisCoroutine()
     {
-        UnityEngine.Debug.Log("start Thread");
         while (script.isPlaying)
         {
             FFTAnalysis();
@@ -132,7 +130,7 @@ public class AudioManager : MonoBehaviour
             else
             {
                 // handle the case where maxIndex is at the array boundary
-                frequency = maxIndex * sampleRate / (float)fft.length;
+                frequency = Mathf.Abs(maxIndex * sampleRate / (float)fft.length);
             }
 
             UnityEngine.Debug.Log("Detected Frequency: " + frequency + " Hz");

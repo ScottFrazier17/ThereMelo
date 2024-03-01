@@ -18,6 +18,9 @@ public class HandManager : MonoBehaviour
 
     private bool movingObject => movingPad || movingRod;
     private StudioEventEmitter audioManagerEmitter;
+
+    private string userHand;
+
     // Singleton instance
     public static HandManager instance { get; private set; }
 
@@ -38,13 +41,23 @@ public class HandManager : MonoBehaviour
         }
     }
 
+    private void updateHand(string key, object value)
+    {
+        if (key == "UserHand")
+        {
+            userHand = value.ToString();
+        }
+    }
+
     private void OnEnable()
     {
         leapProvider.OnUpdateFrame += OnUpdateFrame;
+        UserPrefs.OnPreferenceChanged += updateHand;
     }
     private void OnDisable()
     {
         leapProvider.OnUpdateFrame -= OnUpdateFrame;
+        UserPrefs.OnPreferenceChanged -= updateHand;
     }
 
     private float calcClosest(Hand hand, GameObject targetObj)
@@ -74,10 +87,20 @@ public class HandManager : MonoBehaviour
             if (!isPlaying) {
                 isPlaying = true;
                 audioManagerEmitter.Play();
-                Debug.Log("playing");
             }
-            float pDis = calcClosest(_rightHand, pitchObj);
-            float vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
+
+            // get hand pref
+            float pDis, vDis;
+            if (userHand == "Right")
+            {
+                pDis = calcClosest(_rightHand, pitchObj);
+                vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
+            }
+            else
+            {
+                pDis = calcClosest(_leftHand, pitchObj);
+                vDis = Vector3.Distance(_rightHand.PalmPosition, volumeObj.transform.position);
+            }
 
             float volumeValue = vDis;
             float pitchValue = (1 / (pDis * 2)) - 1;
@@ -91,7 +114,6 @@ public class HandManager : MonoBehaviour
             // stop theremin sound.
             isPlaying = false;
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-            Debug.Log("stopping");
         }
     }
 

@@ -9,7 +9,7 @@
     },
     "com.ultraleap.tracking": {
       "version": "6.14.0",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://package.openupm.com"

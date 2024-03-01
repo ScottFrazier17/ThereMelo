@@ -39,10 +39,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638445601119640315
+  lastModified: 638448211074082501
   FileSizes:
   - Name: Desktop
-    Value: 118656
+    Value: 13472
   Exists: 1
 --- !u!114 &-8014316140714348574
 MonoBehaviour:
@@ -112,7 +112,7 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
---- !u!114 &-3512342003398690211
+--- !u!114 &-2258772678327686688
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/UI/MasterVolume
+  m_Name: parameter:/UI - Menu Open/MasterVolume
   m_EditorClassIdentifier: 
   Name: MasterVolume
   StudioPath: 
@@ -166,6 +166,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 4995
+--- !u!114 &-103441340257575711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UI - Menu Close/MasterVolume
+  m_EditorClassIdentifier: 
+  Name: MasterVolume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2494716924
+    data2: 3397179766
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-49953406282970116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI - Menu Close
+  m_EditorClassIdentifier: 
+  Path: event:/UI - Menu Close
+  Guid:
+    Data1: -1065268319
+    Data2: 1094185537
+    Data3: -794007879
+    Data4: -1286589332
+  Banks:
+  - {fileID: -8567465996588967417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -103441340257575711}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,43 +237,16 @@ MonoBehaviour:
   - {fileID: -8567465996588967417}
   EditorEvents:
   - {fileID: -1563856547429115356}
-  - {fileID: 3495599379992739590}
+  - {fileID: 7091549987436149352}
+  - {fileID: -49953406282970116}
   EditorParameters:
   - {fileID: -4217958734853259387}
   MasterBanks:
   - {fileID: 4059210713517914611}
   StringsBanks:
   - {fileID: 5711225379988126098}
-  cacheTime: 638445601119640315
+  cacheTime: 638448211074082501
   cacheVersion: 131608
---- !u!114 &3495599379992739590
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/UI
-  m_EditorClassIdentifier: 
-  Path: event:/UI
-  Guid:
-    Data1: 274392921
-    Data2: 1304887481
-    Data3: -426185580
-    Data4: 1868826805
-  Banks:
-  - {fileID: -8567465996588967417}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters:
-  - {fileID: -3512342003398690211}
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 2000
 --- !u!114 &4059210713517914611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +262,7 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638428347568960931
+  lastModified: 638448211073352510
   FileSizes:
   - Name: Desktop
     Value: 1224
@@ -257,10 +282,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638428347568980989
+  lastModified: 638448211073362506
   FileSizes:
   - Name: Desktop
-    Value: 1028
+    Value: 1088
   Exists: 1
 --- !u!114 &6804854097593770469
 MonoBehaviour:
@@ -286,3 +311,31 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7091549987436149352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/UI - Menu Open
+  m_EditorClassIdentifier: 
+  Path: event:/UI - Menu Open
+  Guid:
+    Data1: 274392921
+    Data2: 1304887481
+    Data3: -426185580
+    Data4: 1868826805
+  Banks:
+  - {fileID: -8567465996588967417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2258772678327686688}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 312
