@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Non-Dominant
-  m_Shader: {fileID: 4800000, guid: c5b35a4c19d643f4f87637cdd8587b98, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8f08d002f2f95fa47863c553c3deec1b, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -68,20 +68,31 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FragmentationFactor: 0.1
     - _FresnelIntensity: 1
-    - _FresnelPower: 0.97
+    - _FresnelPower: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LightIntensity: 1
+    - _LinePatternScale: 1
+    - _LineSpacing: 0.01
+    - _LineThickness: 0.65
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _Outline: 0.002
+    - _Outline: 0.003
+    - _OutlineDot: 0.5
+    - _OutlineDot2: 0.5
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _StippleScale: 1
+    - _StippleThreshold: 0.99
+    - _StripeFrequency: 10
+    - _StripeSpacing: 0.1
+    - _StripeWidth: 0.1
     - _UVSec: 0
     - _ZWrite: 1
     - _useFresnel: 1
@@ -92,5 +103,5 @@ Material:
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FresnelColor: {r: 22.408676, g: 22.408676, b: 22.408676, a: 0.09803922}
     - _MainColor: {r: 0.93011117, g: 0.3813261, b: 0, a: 0}
-    - _OutlineColor: {r: 0.9339623, g: 0.383795, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
