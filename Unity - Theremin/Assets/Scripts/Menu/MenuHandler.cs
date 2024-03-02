@@ -2,12 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using FMOD.Studio;
+using FMODUnity;
+using static Unity.VisualScripting.Member;
 
 public class MenuHandler : MonoBehaviour
 {
     private Vector3 size = new Vector3(0.7f, 0.4f, 0.0001f);
     private Coroutine currentThread;
     private float dur = 0.075f;
+    private Camera mainCamera;
+
+    public HandManager handManager;
+
+    [SerializeField] private EventReference[] Sounds;
+
+    private void Start()
+    {
+        mainCamera = Camera.main;
+    }
 
     private float easeInSine(float x) 
     {
@@ -17,18 +30,20 @@ public class MenuHandler : MonoBehaviour
     public void ToggleMenu()
     {
         // halt any running threads
-        if (currentThread != null) { StopCoroutine(currentThread); currentThread = null; } 
+        if (currentThread != null) { StopCoroutine(currentThread); currentThread = null; }
 
         // if disabled, enable object
-        if (!gameObject.activeSelf)
+        if (!handManager.menuEnabled)
         {
-            gameObject.SetActive(true);
+            AudioManager.instance.PlayOneShot(Sounds[0], mainCamera.gameObject.transform.position);
             StartCoroutine(Grow());
         }
         else 
         {
+            AudioManager.instance.PlayOneShot(Sounds[1], mainCamera.gameObject.transform.position);
             StartCoroutine(Shrink());
         }
+        handManager.menuEnabled = (!handManager.menuEnabled);
     }
 
     IEnumerator Grow()
