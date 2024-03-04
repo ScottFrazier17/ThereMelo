@@ -30,6 +30,8 @@ public class MenuHandler : MonoBehaviour
     public void ToggleMenu()
     {
         // halt any running threads
+        gameObject.SetActive(true);
+
         if (currentThread != null) { StopCoroutine(currentThread); currentThread = null; }
 
         // if disabled, enable object
