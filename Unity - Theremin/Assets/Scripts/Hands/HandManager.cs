@@ -4,6 +4,7 @@ using Leap;
 using System.Collections.Generic;
 using FMODUnity;
 using FMOD.Studio;
+using FMOD;
 
 public class HandManager : MonoBehaviour
 {
@@ -36,7 +37,7 @@ public class HandManager : MonoBehaviour
                 audioManagerEmitter = audioManager.GetComponent<StudioEventEmitter>();
             }
             else {
-                Debug.Log("Audio Manager not found?");
+                UnityEngine.Debug.Log("Audio Manager not found?");
             }
         }
     }
@@ -113,6 +114,7 @@ public class HandManager : MonoBehaviour
         {
             // stop theremin sound.
             isPlaying = false;
+
             audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
     }

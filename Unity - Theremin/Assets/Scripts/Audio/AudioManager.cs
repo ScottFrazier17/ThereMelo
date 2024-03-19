@@ -7,20 +7,24 @@ using System;
 using FMOD;
 using Leap.Unity;
 using UnityEditor.Experimental.GraphView;
+using FMOD.Studio;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance { get; private set; }
     public GameObject handManagement;
 
-    private DSP fftDsp;
     private ChannelGroup channelGroup;
+    private DSP fftDsp;
+
     private float yieldFreq = 3f;
     private Coroutine thread = null;
     private bool wasPlaying = false;
     private HandManager script;
 
     private float currMagnitude = 0f;
+    
+    
 
     private void Awake()
     {
@@ -35,13 +39,16 @@ public class AudioManager : MonoBehaviour
         // set script
         script = handManagement.GetComponent<HandManager>();
 
-        // start fft dsp.
+        // get channel
         RuntimeManager.CoreSystem.getMasterChannelGroup(out channelGroup);
+
+        // start fft dsp.
         RuntimeManager.CoreSystem.createDSPByType(DSP_TYPE.FFT, out fftDsp);
         fftDsp.setParameterInt((int)DSP_FFT.WINDOWTYPE, (int)DSP_FFT_WINDOW.HANNING);
         fftDsp.setParameterInt((int)DSP_FFT.WINDOWSIZE, 2048); // Window size for FFT
-        channelGroup.addDSP(CHANNELCONTROL_DSP_INDEX.HEAD, fftDsp);
+        channelGroup.addDSP(CHANNELCONTROL_DSP_INDEX.TAIL, fftDsp);
 
+        // activate the fft and event, disable oscillator
         fftDsp.setActive(true);
     }
 

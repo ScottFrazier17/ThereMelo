@@ -2714,7 +2714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &849716789
 Transform:
   m_ObjectHideFlags: 0
@@ -2879,7 +2879,7 @@ MonoBehaviour:
   _ignoreHoverMode: 0
   _isIgnoringAllHoverState: 0
   _ignorePrimaryHover: 0
-  _ignoreContact: 0
+  _ignoreContact: 1
   _ignoreGraspingMode: 0
   _ignoreGrasping: 0
   _contactForceMode: 0
@@ -3781,10 +3781,10 @@ MonoBehaviour:
   Emitters:
   - Target: {fileID: 1215053206}
     Params:
+    - Name: Pitch
+      Value: 1
     - Name: Volume
       Value: 0.5
-    - Name: Pitch
-      Value: 0
   TriggerEvent: 0
 --- !u!114 &1215053206
 MonoBehaviour:
@@ -3805,13 +3805,13 @@ MonoBehaviour:
       Data2: 1185356547
       Data3: -1967617873
       Data4: 1320026288
-    Path: event:/Theremin
+    Path: event:/Instruments/Theremin
   Event: 
   PlayEvent: 0
   StopEvent: 0
   AllowFadeout: 1
   TriggerOnce: 0
-  Preload: 0
+  Preload: 1
   AllowNonRigidbodyDoppler: 0
   Params:
   - Name: Pitch
@@ -4703,19 +4703,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 852384296418809053, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 852384296418809053, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 852384296418809053, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 852384296418809053, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919049430337028959, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -4731,11 +4731,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2011638515772014325, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.06045662
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2011638515772014325, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2011638515772014325, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMin.x
@@ -4743,11 +4743,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -5337.0938
+      value: -367481.97
       objectReference: {fileID: 0}
     - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2534.232
+      value: 176971.33
       objectReference: {fileID: 0}
     - target: {fileID: 2618143841806443167, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -4799,11 +4799,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4045943224644957498, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4045943224644957498, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4642849763433419212, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4843,23 +4843,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5988103432870647510, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5988103432870647510, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -17
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6153107280980967376, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6153107280980967376, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6153107280980967376, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.6857708
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6204625257935452074, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -5083,7 +5083,7 @@ MonoBehaviour:
   _ignoreHoverMode: 0
   _isIgnoringAllHoverState: 0
   _ignorePrimaryHover: 0
-  _ignoreContact: 0
+  _ignoreContact: 1
   _ignoreGraspingMode: 0
   _ignoreGrasping: 0
   _contactForceMode: 0
@@ -6010,26 +6010,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 849716789}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2140429284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287841046523768620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0061689d08518c34585825546d5c7799, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerSound:
-    Guid:
-      Data1: 274392921
-      Data2: 1304887481
-      Data3: -426185580
-      Data4: 1868826805
-    Path: event:/UI
-  source: {fileID: 0}
 --- !u!114 &2140429289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6081,7 +6061,6 @@ GameObject:
   - component: {fileID: 3287841046523768616}
   - component: {fileID: 3287841046523768623}
   - component: {fileID: 3287841046523768622}
-  - component: {fileID: 2140429284}
   - component: {fileID: 2140429289}
   m_Layer: 0
   m_Name: Volume
@@ -6586,7 +6565,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3287841048080414675
 Transform:
   m_ObjectHideFlags: 0

@@ -2,6 +2,7 @@ using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using UnityEngine;
+using FMOD;
 
 public class AudioHandler : MonoBehaviour
 {
