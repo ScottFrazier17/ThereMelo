@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using FMODUnity;
@@ -8,6 +8,10 @@ using FMOD;
 using Leap.Unity;
 using UnityEditor.Experimental.GraphView;
 using FMOD.Studio;
+using UnityEngine.UIElements;
+using Unity.VisualScripting;
+using UnityEngine.UI;
+using System.Drawing;
 
 public class AudioManager : MonoBehaviour
 {
@@ -23,8 +27,20 @@ public class AudioManager : MonoBehaviour
     private HandManager script;
 
     private float currMagnitude = 0f;
-    
-    
+    private float[] spectrum = new float[512];
+
+    private float frequency;
+    private float curFreq;
+    private string note;
+
+    private LineRenderer lineRenderer;
+
+    private int points = 25;
+    private float length = 5f;
+    private float lWidth = 0.025f;
+
+    private float phase;
+    private float speed = 1f;
 
     private void Awake()
     {
@@ -50,6 +66,12 @@ public class AudioManager : MonoBehaviour
 
         // activate the fft and event, disable oscillator
         fftDsp.setActive(true);
+
+
+        // visualizer stuff
+        lineRenderer = GetComponent<LineRenderer>();
+        lineRenderer.startWidth = lWidth;
+        lineRenderer.endWidth = lWidth;
     }
 
     void Update()
@@ -60,7 +82,7 @@ public class AudioManager : MonoBehaviour
             {
                 thread = StartCoroutine(FFTAnalysisCoroutine());
             }
-            wasPlaying= true;
+            wasPlaying = true;
         }
         else if (!script.isPlaying && wasPlaying)
         {
@@ -73,9 +95,21 @@ public class AudioManager : MonoBehaviour
                 currMagnitude = 0f; // set Mag to zero.
             }
             wasPlaying = false;
+            frequency = 0f;
+            GetComponentInChildren<Text>().text = "";
         }
-    }
 
+        // sine wave visualizer decor
+        lineRenderer.positionCount = points;
+        float halfLength = length / 2f;
+        for (int i = 0; i < points; i++)
+        {
+            float x = (i * (length / points)) - halfLength;
+            float y = frequency > 0 ? Mathf.Sin((x) + phase) : 0f;
+            lineRenderer.SetPosition(i, new Vector3(x, y, 0));
+        }
+        phase += speed * Time.deltaTime;
+    }
 
     private IEnumerator FFTAnalysisCoroutine()
     {
@@ -86,17 +120,56 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    private Tuple<string, int> getNote(float freq)
+    private string[] NOTES = { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
+    private (int, int, int)[] noteColors = {
+        (58, 92, 255),
+        (103, 58, 255),
+        (205, 58, 255),
+        (255, 76, 58),
+        (255, 133, 58),
+        (255, 153, 58),
+        (255, 215, 58),
+        (162, 255, 58),
+        (100, 255, 58),
+        (67, 255, 58),
+        (58, 255, 180),
+        (58, 167, 255),
+    };
+
+    private UnityEngine.Color ConvertColor((int, int, int) colorTuple) { 
+        return new UnityEngine.Color(colorTuple.Item1 / 255.0f, colorTuple.Item2 / 255.0f, colorTuple.Item3 / 255.0f); 
+    }
+
+    private string getNote(float freq)
     {
-        if (freq == 0f) { return new Tuple<string, int>("?", 0); }
-        string[] NOTES = { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
+        if (freq == 0f) {
+            lineRenderer.material.color = UnityEngine.Color.black;
+            return "?" + 0.ToString(); 
+        }
 
         double noteNumber = 12 * Math.Log(freq / 440, 2) + 49;
         noteNumber = Math.Round(noteNumber);
-        string note = NOTES[(int)(noteNumber) % NOTES.Length];
+        int noteIndex = (int)(noteNumber) % NOTES.Length;
+        string noteFound = NOTES[noteIndex];
         int octave = (int)((noteNumber + 8) / NOTES.Length);
 
-        return new Tuple<string, int>(note, octave);
+        // set wave speed by notes
+        speed = (float)noteNumber / 2;
+
+        // set color and text
+        GetComponentInChildren<Text>().text = noteFound;
+        GameObject[] objects = GameObject.FindGameObjectsWithTag("Colors");
+        foreach (GameObject obj in objects)
+        {
+            Renderer renderer = obj.GetComponent<Renderer>();
+            if (renderer != null && renderer.material.HasProperty("_EmissionColor"))
+            {
+                renderer.material.EnableKeyword("_EMISSION");
+                renderer.material.SetColor("_EmissionColor", ConvertColor(noteColors[noteIndex]));
+            }
+        } 
+
+        return noteFound + octave.ToString();
     }
 
     void FFTAnalysis()
@@ -124,7 +197,6 @@ public class AudioManager : MonoBehaviour
             int sampleRate;
             RuntimeManager.CoreSystem.getSoftwareFormat(out sampleRate, out _, out _);
 
-            float frequency;
             if (maxIndex > 0 && maxIndex < fft.length - 1)
             {
                 float leftMagnitude = fft.spectrum[0][maxIndex - 1];
@@ -140,21 +212,24 @@ public class AudioManager : MonoBehaviour
                 frequency = Mathf.Abs(maxIndex * sampleRate / (float)fft.length);
             }
 
-            UnityEngine.Debug.Log("Detected Frequency: " + frequency + " Hz");
-
-            // convert frequency to musical note
-            var (note, octave) = getNote(frequency);
-            UnityEngine.Debug.Log("Note: " + note + " Octave : " + octave);
+            // convert frequency to musical note and put into variables.
+            note = getNote(frequency);
 
             // for speakers.
             currMagnitude = maxMagnitude;
         }
     }
 
+
     // public getters
     public float getMagnitude()
     {
         return currMagnitude;
+    }
+
+    public float getFreq() 
+    {
+        return frequency;
     }
 
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
