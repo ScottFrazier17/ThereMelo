@@ -13,8 +13,7 @@ public class MenuHandler : MonoBehaviour
     private float dur = 0.075f;
     private Camera mainCamera;
 
-    public HandManager handManager;
-
+    [SerializeField] private HandManager handManager;
     [SerializeField] private EventReference[] Sounds;
 
     private void Start()
@@ -27,9 +26,11 @@ public class MenuHandler : MonoBehaviour
         return 1 - Mathf.Cos((x * Mathf.PI) / 2);
     }
 
-    public void ToggleMenu()
+    public void toggleMenu(bool forceClose)
     {
         // halt any running threads
+        gameObject.SetActive(true);
+
         if (currentThread != null) { StopCoroutine(currentThread); currentThread = null; }
 
         // if disabled, enable object
@@ -76,6 +77,6 @@ public class MenuHandler : MonoBehaviour
         }
 
         transform.localScale = Vector3.zero;
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false);
     }
 }

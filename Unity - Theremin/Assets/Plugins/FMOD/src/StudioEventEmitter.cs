@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 namespace FMODUnity
@@ -61,6 +62,14 @@ namespace FMODUnity
                 eventDescription.getMinMaxDistance(out minDistance, out maxDistance);
                 return maxDistance;
             }
+        }
+
+
+        public void ChangeEvent(string newEvent)
+        {
+            EventReference = EventReference.Find(newEvent);
+            Stop();
+            Lookup();
         }
 
         public static void UpdateActiveEmitters()

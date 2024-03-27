@@ -2,13 +2,14 @@ using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using UnityEngine;
+using FMOD;
 
 public class AudioHandler : MonoBehaviour
 {
     [SerializeField] private EventReference triggerSound;
     [SerializeField] private GameObject source;
 
-    private FMOD.Studio.EventInstance eventInstance;
+    private EventInstance eventInstance;
 
     void Awake()
     {

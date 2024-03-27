@@ -4,22 +4,21 @@ using Leap;
 using System.Collections.Generic;
 using FMODUnity;
 using FMOD.Studio;
+using FMOD;
 
 public class HandManager : MonoBehaviour
 {
     public LeapProvider leapProvider;
-    public GameObject volumeObj;
-    public GameObject pitchObj;
-
-    public bool movingPad = false;
-    public bool movingRod = false;
-    public bool menuEnabled = false;
-    public bool isPlaying;
+    
+    public bool movingPad = false, movingRod = false, menuEnabled = false, isPlaying;
 
     private bool movingObject => movingPad || movingRod;
-    private StudioEventEmitter audioManagerEmitter;
-
+    
     private string userHand;
+    private float vol, threshold = 0.05f;
+
+    [SerializeField] private StudioEventEmitter audioManagerEmitter;
+    [SerializeField] private GameObject volumeObj, pitchObj;
 
     // Singleton instance
     public static HandManager instance { get; private set; }
@@ -30,14 +29,6 @@ public class HandManager : MonoBehaviour
         }
         else{
             instance = this;
-            GameObject audioManager = GameObject.Find("Audio Manager");
-            if (audioManager != null)
-            {
-                audioManagerEmitter = audioManager.GetComponent<StudioEventEmitter>();
-            }
-            else {
-                Debug.Log("Audio Manager not found?");
-            }
         }
     }
 
@@ -58,6 +49,13 @@ public class HandManager : MonoBehaviour
     {
         leapProvider.OnUpdateFrame -= OnUpdateFrame;
         UserPrefs.OnPreferenceChanged -= updateHand;
+    }
+
+    private bool IsPlaying(EventInstance instance)
+    {
+        PLAYBACK_STATE state;
+        instance.getPlaybackState(out state);
+        return state != PLAYBACK_STATE.STOPPED;
     }
 
     private float calcClosest(Hand hand, GameObject targetObj)
@@ -91,31 +89,34 @@ public class HandManager : MonoBehaviour
 
             // get hand pref
             float pDis, vDis;
-            if (userHand == "Right")
-            {
-                pDis = calcClosest(_rightHand, pitchObj);
-                vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position);
+            pDis = calcClosest(userHand == "Right" ? _rightHand : _leftHand, pitchObj) - 0.125f;
+            vDis = Vector3.Distance(userHand == "Right" ? _leftHand.PalmPosition : _rightHand.PalmPosition, volumeObj.transform.position) - 0.125f;
+
+            vol = Mathf.Sqrt(Mathf.Max(vDis, 0.0f));
+
+            // if volume is lower than 0, stop audio, else continue
+            if (vol < threshold && IsPlaying(audioManagerEmitter.EventInstance)) {
+                audioManagerEmitter.Stop();
             }
-            else
-            {
-                pDis = calcClosest(_leftHand, pitchObj);
-                vDis = Vector3.Distance(_rightHand.PalmPosition, volumeObj.transform.position);
+            else if (vol > threshold && !IsPlaying(audioManagerEmitter.EventInstance)) {
+                audioManagerEmitter.Play();
             }
 
-            float volumeValue = vDis;
-            float pitchValue = (1 / (pDis * 2)) - 1;
-
-            audioManagerEmitter.EventInstance.setParameterByName("Volume", volumeValue);
-            audioManagerEmitter.EventInstance.setParameterByName("Pitch", pitchValue);
+            audioManagerEmitter.EventInstance.setParameterByName("Volume", (Mathf.Max(vol, 0.0f)));
+            audioManagerEmitter.EventInstance.setParameterByName("Pitch", pDis);
 
         }
         else if (isPlaying)
         {
             // stop theremin sound.
             isPlaying = false;
-            audioManagerEmitter.EventInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
+            audioManagerEmitter.Stop();
         }
     }
+
+    // getters
+    public float getVolume() { return vol; }
 
     // setters.
     public void setMenuBoolean(bool x) { menuEnabled = x; }
