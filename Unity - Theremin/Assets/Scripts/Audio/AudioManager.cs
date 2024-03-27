@@ -102,10 +102,11 @@ public class AudioManager : MonoBehaviour
         // sine wave visualizer decor
         lineRenderer.positionCount = points;
         float halfLength = length / 2f;
+        float amp = HandManager.instance.getVolume();
         for (int i = 0; i < points; i++)
         {
             float x = (i * (length / points)) - halfLength;
-            float y = frequency > 0 ? Mathf.Sin((x) + phase) : 0f;
+            float y = frequency > 0 ? amp * Mathf.Sin((x) + phase) : 0f;
             lineRenderer.SetPosition(i, new Vector3(x, y, 0));
         }
         phase += speed * Time.deltaTime;
@@ -121,20 +122,6 @@ public class AudioManager : MonoBehaviour
     }
 
     private string[] NOTES = { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
-    private (int, int, int)[] noteColors = {
-        (58, 92, 255),
-        (103, 58, 255),
-        (205, 58, 255),
-        (255, 76, 58),
-        (255, 133, 58),
-        (255, 153, 58),
-        (255, 215, 58),
-        (162, 255, 58),
-        (100, 255, 58),
-        (67, 255, 58),
-        (58, 255, 180),
-        (58, 167, 255),
-    };
 
     private UnityEngine.Color ConvertColor((int, int, int) colorTuple) { 
         return new UnityEngine.Color(colorTuple.Item1 / 255.0f, colorTuple.Item2 / 255.0f, colorTuple.Item3 / 255.0f); 
@@ -146,30 +133,31 @@ public class AudioManager : MonoBehaviour
             lineRenderer.material.color = UnityEngine.Color.black;
             return "?" + 0.ToString(); 
         }
-
+        
         double noteNumber = 12 * Math.Log(freq / 440, 2) + 49;
         noteNumber = Math.Round(noteNumber);
         int noteIndex = (int)(noteNumber) % NOTES.Length;
-        string noteFound = NOTES[noteIndex];
-        int octave = (int)((noteNumber + 8) / NOTES.Length);
-
-        // set wave speed by notes
-        speed = (float)noteNumber / 2;
-
-        // set color and text
-        GetComponentInChildren<Text>().text = noteFound;
-        GameObject[] objects = GameObject.FindGameObjectsWithTag("Colors");
-        foreach (GameObject obj in objects)
+        if (noteIndex >= 0 && noteIndex < NOTES.Length)
         {
-            Renderer renderer = obj.GetComponent<Renderer>();
-            if (renderer != null && renderer.material.HasProperty("_EmissionColor"))
-            {
-                renderer.material.EnableKeyword("_EMISSION");
-                renderer.material.SetColor("_EmissionColor", ConvertColor(noteColors[noteIndex]));
-            }
-        } 
+            string noteFound = NOTES[noteIndex];
+            int octave = (int)((noteNumber + 8) / NOTES.Length);
 
-        return noteFound + octave.ToString();
+            // set wave speed by notes
+            speed = (float)noteNumber / 2;
+
+            // set color and text
+            GetComponentInChildren<Text>().text = noteFound + octave.ToString();
+            ColorLerp colorLerp = GetComponent<ColorLerp>();
+            if (colorLerp != null) { colorLerp.startLerp(noteIndex); }
+
+            return noteFound + octave.ToString();
+        }
+        else 
+        {
+            lineRenderer.material.color = UnityEngine.Color.black;
+            return "?" + 0.ToString();
+        }
+
     }
 
     void FFTAnalysis()
@@ -216,7 +204,8 @@ public class AudioManager : MonoBehaviour
             note = getNote(frequency);
 
             // for speakers.
-            currMagnitude = maxMagnitude;
+            var mag = Mathf.Abs(maxMagnitude);
+            currMagnitude = mag < 0.1f ? 0 : mag;
         }
     }
 
@@ -238,7 +227,7 @@ public class AudioManager : MonoBehaviour
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
-    public FMOD.Studio.EventInstance PlayConstaint(EventReference sound, Vector3 worldPos)
+    public EventInstance PlayConstaint(EventReference sound, Vector3 worldPos)
     {
         // Create instance
         FMOD.Studio.EventInstance eventInstance = RuntimeManager.CreateInstance(sound);

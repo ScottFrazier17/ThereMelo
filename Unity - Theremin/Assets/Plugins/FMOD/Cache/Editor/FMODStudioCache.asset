@@ -1,5 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8892865377750761914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trombone/Pitch
+  m_EditorClassIdentifier: 
+  Name: Pitch
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 117200170
+    data2: 3297094454
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-8725940892926289479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,12 +63,12 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638463985629528355
+  lastModified: 638470761653848337
   FileSizes:
   - Name: Desktop
-    Value: 13472
+    Value: 14816
   Exists: 1
---- !u!114 &-7902602409140220287
+--- !u!114 &-8320766023218908281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,9 +78,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Instruments/Synth
+  m_Name: event:/Instruments/Trombone
   m_EditorClassIdentifier: 
-  Path: event:/Instruments/Synth
+  Path: event:/Instruments/Trombone
   Guid:
     Data1: -1506043399
     Data2: 1078615368
@@ -68,12 +92,12 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 4144981877539682384}
-  - {fileID: 6713746861967326365}
-  - {fileID: 4346804842243665412}
+  - {fileID: 7117439176748929325}
+  - {fileID: 7646089878276303644}
+  - {fileID: -8892865377750761914}
   MinDistance: 1
   MaxDistance: 20
-  Length: 4995
+  Length: 8000
 --- !u!114 &-6258990637227659486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,10 +141,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Instrument.bank
   Name: Instrument
   StudioPath: bank:/Instrument
-  lastModified: 638464006192549960
+  lastModified: 638466452849076848
   FileSizes:
   - Name: Desktop
-    Value: 15712
+    Value: 113888
   Exists: 1
 --- !u!114 &-4217958734853259387
 MonoBehaviour:
@@ -174,6 +198,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 500
+--- !u!114 &-1075780214631095287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI - Button
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI - Button
+  Guid:
+    Data1: -1330880887
+    Data2: 1127256894
+    Data3: -1308110437
+    Data4: 871859878
+  Banks:
+  - {fileID: -8567465996588967417}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 865149933468432464}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 52
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,16 +245,17 @@ MonoBehaviour:
   - {fileID: -8567465996588967417}
   EditorEvents:
   - {fileID: 3483796950776404108}
-  - {fileID: -7902602409140220287}
   - {fileID: -6258990637227659486}
   - {fileID: -2776989743746306773}
+  - {fileID: -8320766023218908281}
+  - {fileID: -1075780214631095287}
   EditorParameters:
   - {fileID: -4217958734853259387}
   MasterBanks:
   - {fileID: 4059210713517914611}
   StringsBanks:
   - {fileID: 5711225379988126098}
-  cacheTime: 638464006192549960
+  cacheTime: 638470761653848337
   cacheVersion: 131608
 --- !u!114 &337390819675033607
 MonoBehaviour:
@@ -226,6 +279,30 @@ MonoBehaviour:
     data2: 3297094454
   Type: 0
   IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &865149933468432464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UI - Button/MasterVolume
+  m_EditorClassIdentifier: 
+  Name: MasterVolume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 2494716924
+    data2: 3397179766
+  Type: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
 --- !u!114 &3483796950776404108
@@ -273,58 +350,10 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638463985629274222
+  lastModified: 638470761652870978
   FileSizes:
   - Name: Desktop
     Value: 1224
-  Exists: 1
---- !u!114 &4144981877539682384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Synth/MasterVolume
-  m_EditorClassIdentifier: 
-  Name: MasterVolume
-  StudioPath: 
-  Min: 0
-  Max: 1
-  Default: 0
-  ID:
-    data1: 2494716924
-    data2: 3397179766
-  Type: 0
-  IsGlobal: 1
-  Labels: []
-  Exists: 1
---- !u!114 &4346804842243665412
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Synth/Pitch
-  m_EditorClassIdentifier: 
-  Name: Pitch
-  StudioPath: 
-  Min: 0
-  Max: 2
-  Default: 0
-  ID:
-    data1: 117200170
-    data2: 3297094454
-  Type: 0
-  IsGlobal: 0
-  Labels: []
   Exists: 1
 --- !u!114 &5310170994783764074
 MonoBehaviour:
@@ -365,12 +394,12 @@ MonoBehaviour:
   Path: ../FMod/ThereMelo-Sounds/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638463985629284216
+  lastModified: 638470761652880982
   FileSizes:
   - Name: Desktop
-    Value: 1152
+    Value: 1204
   Exists: 1
---- !u!114 &6713746861967326365
+--- !u!114 &7117439176748929325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -380,18 +409,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/Synth/Volume
+  m_Name: parameter:/Trombone/MasterVolume
   m_EditorClassIdentifier: 
-  Name: Volume
+  Name: MasterVolume
   StudioPath: 
   Min: 0
   Max: 1
   Default: 0
   ID:
-    data1: 3215818853
-    data2: 3345806298
+    data1: 2494716924
+    data2: 3397179766
   Type: 0
-  IsGlobal: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
 --- !u!114 &7499203658831210112
@@ -416,6 +445,30 @@ MonoBehaviour:
     data2: 3397179766
   Type: 0
   IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &7646089878276303644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Trombone/Volume
+  m_EditorClassIdentifier: 
+  Name: Volume
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 3215818853
+    data2: 3345806298
+  Type: 0
+  IsGlobal: 0
   Labels: []
   Exists: 1
 --- !u!114 &8083660703320918905

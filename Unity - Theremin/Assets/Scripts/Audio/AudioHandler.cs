@@ -9,7 +9,7 @@ public class AudioHandler : MonoBehaviour
     [SerializeField] private EventReference triggerSound;
     [SerializeField] private GameObject source;
 
-    private FMOD.Studio.EventInstance eventInstance;
+    private EventInstance eventInstance;
 
     void Awake()
     {
