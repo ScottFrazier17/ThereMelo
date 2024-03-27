@@ -1,9 +1,11 @@
+using FMOD;
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.GraphicsBuffer;
 
 public class InstrumentsHandler : MonoBehaviour
 {
@@ -64,20 +66,29 @@ public class InstrumentsHandler : MonoBehaviour
 
         icon.GetComponent<SpriteRenderer>().sprite = menuBool ? Resources.Load<Sprite>("Sprites/exit") : selectedIcon;
 
-        // start movement
+        // start movement if forceClose isn't true.
         Vector3 tar = new Vector3(instrumentMenu.transform.localPosition.x > 0 ? value : -value, 0f, 0f);
-        if (mover != null)
+        if (!forceClose)
         {
-            StopCoroutine(mover);
-            mover = null;
+            // sound
+            AudioManager.instance.PlayOneShot(menuBool ? Sounds[0] : Sounds[1], mainCamera.gameObject.transform.position);
+
+            if (mover != null)
+            {
+                StopCoroutine(mover);
+                mover = null;
+            }
+            mover = StartCoroutine(MoveTo(tar, 0.05f));
         }
-        mover = StartCoroutine(MoveTo(tar, 0.05f));
+        else 
+        { 
+            volumeSlider.transform.localPosition = tar;
+            icon.GetComponent<SpriteRenderer>().sprite = selectedIcon;
+        }
+        
 
         // toggle menu
         instrumentMenu.SetActive(menuBool);
-
-        // sound
-        AudioManager.instance.PlayOneShot(menuBool ? Sounds[0] : Sounds[1], mainCamera.gameObject.transform.position);
     }
 
 }

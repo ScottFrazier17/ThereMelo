@@ -88,7 +88,6 @@ public class AudioManager : MonoBehaviour
         {
             if (thread != null)
             {
-                UnityEngine.Debug.Log("Stopping Thread");
                 StopCoroutine(thread);
                 thread = null;
 

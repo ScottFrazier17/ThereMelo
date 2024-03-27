@@ -75,8 +75,6 @@ public class UserPrefs : MonoBehaviour
         // assume swap
         if (Hand == "") { Hand = (userHand == "Left" ? "Right" : "Left"); }
 
-        Debug.Log($"{Hand} hand as Dominant Chirality");
-
         // swap anchors depending on hand.
         swapAnchors(Hand);
 

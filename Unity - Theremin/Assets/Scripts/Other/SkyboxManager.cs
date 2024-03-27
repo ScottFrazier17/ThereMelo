@@ -28,14 +28,14 @@ public class SkyboxManager : MonoBehaviour
     {
         if (script.isPlaying && (speed < maxSpeed))
         {
-            speed += Time.deltaTime * 0.1f;
+            speed += Time.deltaTime * 0.5f;
             speed = Mathf.Min(speed, maxSpeed);
 
            
         }
         else if (!script.isPlaying)
         {
-            speed -= Time.deltaTime * 0.2f;
+            speed -= Time.deltaTime * 1f;
             speed = Mathf.Max(speed, minSpeed);
         }
 

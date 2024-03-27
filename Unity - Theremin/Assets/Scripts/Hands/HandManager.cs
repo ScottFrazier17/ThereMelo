@@ -89,20 +89,10 @@ public class HandManager : MonoBehaviour
 
             // get hand pref
             float pDis, vDis;
-            if (userHand == "Right")
-            {
-                pDis = calcClosest(_rightHand, pitchObj);
-                vDis = Vector3.Distance(_leftHand.PalmPosition, volumeObj.transform.position) - 0.125f;
-            }
-            else
-            {
-                pDis = calcClosest(_leftHand, pitchObj);
-                vDis = Vector3.Distance(_rightHand.PalmPosition, volumeObj.transform.position) - 0.125f;
-            }
+            pDis = calcClosest(userHand == "Right" ? _rightHand : _leftHand, pitchObj) - 0.125f;
+            vDis = Vector3.Distance(userHand == "Right" ? _leftHand.PalmPosition : _rightHand.PalmPosition, volumeObj.transform.position) - 0.125f;
 
             vol = Mathf.Sqrt(Mathf.Max(vDis, 0.0f));
-            float pitchValue = (1 / (pDis * 1.75f)) - 1;
-
 
             // if volume is lower than 0, stop audio, else continue
             if (vol < threshold && IsPlaying(audioManagerEmitter.EventInstance)) {
@@ -113,7 +103,7 @@ public class HandManager : MonoBehaviour
             }
 
             audioManagerEmitter.EventInstance.setParameterByName("Volume", (Mathf.Max(vol, 0.0f)));
-            audioManagerEmitter.EventInstance.setParameterByName("Pitch", pitchValue);
+            audioManagerEmitter.EventInstance.setParameterByName("Pitch", pDis);
 
         }
         else if (isPlaying)
