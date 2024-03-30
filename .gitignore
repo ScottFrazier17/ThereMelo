@@ -90,3 +90,6 @@ Unity - Theremin/[Aa]ssets/[Ss]treamingAssets/aa/*
 # If the source bank files are kept outside of the StreamingAssets folder then these can be ignored.
 # Log files can be ignored.
 fmod_editor.log
+
+# Ignore MacOS Generated files
+.DS_Store
