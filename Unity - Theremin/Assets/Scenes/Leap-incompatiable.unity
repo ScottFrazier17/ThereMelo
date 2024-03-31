@@ -7884,8 +7884,16 @@ PrefabInstance:
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6426448320267853852, guid: e3dffb514ca80044eb64b599b6b2be2a, type: 3}
-      propertyPath: m_LocalRotation.y
+    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8918270
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4363729.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618143841806443167, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_Navigation.m_Mode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6426448320267853852, guid: e3dffb514ca80044eb64b599b6b2be2a, type: 3}
