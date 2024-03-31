@@ -23,6 +23,7 @@ public class changeColor : MonoBehaviour
         if (gameObject.activeInHierarchy){
             StartCoroutine(LerpColor(touched));
         }
+        
     }
 
     IEnumerator LerpColor(bool touched)
