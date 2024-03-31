@@ -20,11 +20,9 @@ public class changeColor : MonoBehaviour
     }
     public void SetColor(bool touched)
     {
-        if (gameObject.activeInHierarchy)
-        {
+        if (gameObject.activeInHierarchy){
             StartCoroutine(LerpColor(touched));
         }
-
     }
 
     IEnumerator LerpColor(bool touched)
