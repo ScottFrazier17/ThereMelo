@@ -9,6 +9,8 @@ using static Unity.VisualScripting.Member;
 public class MenuHandler : MonoBehaviour
 {
     private Vector3 size = new Vector3(0.7f, 0.4f, 0.0001f);
+// private Vector3 smallSize = new Vector3(0.01f, 0.01f, 0.01f);
+
     private Coroutine currentThread;
     private float dur = 0.075f;
     private Camera mainCamera;
@@ -21,7 +23,7 @@ public class MenuHandler : MonoBehaviour
         mainCamera = Camera.main;
     }
 
-    private float easeInSine(float x) 
+    private float easeInSine(float x)
     {
         return 1 - Mathf.Cos((x * Mathf.PI) / 2);
     }
@@ -39,11 +41,12 @@ public class MenuHandler : MonoBehaviour
             AudioManager.instance.PlayOneShot(Sounds[0], mainCamera.gameObject.transform.position);
             StartCoroutine(Grow());
         }
-        else 
+        else
         {
             AudioManager.instance.PlayOneShot(Sounds[1], mainCamera.gameObject.transform.position);
             StartCoroutine(Shrink());
         }
+
         handManager.menuEnabled = (!handManager.menuEnabled);
     }
 
@@ -72,11 +75,9 @@ public class MenuHandler : MonoBehaviour
         {
             time += Time.deltaTime;
             float factor = easeInSine(time / dur);
-            transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, factor);
+            transform.localScale = Vector3.Lerp(initialScale, new Vector3(0, 0, 0.000001f), factor);
             yield return null;
         }
-
-        transform.localScale = Vector3.zero;
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
