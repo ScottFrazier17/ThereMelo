@@ -306,7 +306,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 69975da30cf963f47b3c4679da3dec4e, type: 3}
+    m_Font: {fileID: 12800000, guid: 997a43b767814dd0a7642ec9b78cba41, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 1
@@ -7764,18 +7764,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -8918270
-      objectReference: {fileID: 0}
-    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 4363729.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2618143841806443167, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
-      propertyPath: m_Navigation.m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e3dffb514ca80044eb64b599b6b2be2a, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -7908,6 +7896,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0248fcbf09eb6cf4a851832061141baf, type: 2}
+    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -8918270
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113837065891671374, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4363729.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2618143841806443167, guid: ed811e274f5753b478b84e8424f730ef, type: 3}
+      propertyPath: m_Navigation.m_Mode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10413,11 +10413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1318401524562632926, guid: 5f502099b5fd73146b19d3e813bbcac9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -250388.1
+      value: -266340.88
       objectReference: {fileID: 0}
     - target: {fileID: 1318401524562632926, guid: 5f502099b5fd73146b19d3e813bbcac9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 160620.23
+      value: 169898.67
       objectReference: {fileID: 0}
     - target: {fileID: 1648932537608215649, guid: 5f502099b5fd73146b19d3e813bbcac9, type: 3}
       propertyPath: m_Name
