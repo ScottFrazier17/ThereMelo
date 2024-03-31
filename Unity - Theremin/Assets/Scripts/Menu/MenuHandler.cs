@@ -72,11 +72,9 @@ public class MenuHandler : MonoBehaviour
         {
             time += Time.deltaTime;
             float factor = easeInSine(time / dur);
-            transform.localScale = Vector3.Lerp(initialScale, Vector3.zero, factor);
+            transform.localScale = Vector3.Lerp(initialScale, new Vector3(0, 0, 0.000001f), factor);
             yield return null;
         }
-
-        transform.localScale = Vector3.zero;
-        //gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 }
