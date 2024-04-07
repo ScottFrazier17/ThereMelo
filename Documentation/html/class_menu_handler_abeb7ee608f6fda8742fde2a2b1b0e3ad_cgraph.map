@@ -1,0 +1,10 @@
+<map id="MenuHandler.toggleMenu" name="MenuHandler.toggleMenu">
+<area shape="rect" id="Node000001" title="Toggles the menu&#39;s visibility, optionally forcing it to close, with animations and sound effects." alt="" coords="5,31,174,56"/>
+<area shape="rect" id="Node000002" href="$class_menu_handler.html#a7eb1c3aa282e1b934acf8cabff729c36" title="Coroutine to animate the menu growing to its target size." alt="" coords="225,5,357,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="174,30,209,26,210,31,174,36"/>
+<area shape="rect" id="Node000004" href="$class_menu_handler.html#a33a1ada8333ea5f250e072f39b9db0a0" title="Coroutine to animate the menu shrinking to disappear." alt="" coords="222,55,360,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="174,51,207,55,206,60,174,56"/>
+<area shape="rect" id="Node000003" href="$class_menu_handler.html#abdca025a29c82793e31ae41efb0b4ed7" title="Easing function for the animation, creating a smooth start effect." alt="" coords="408,31,574,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="358,24,393,28,392,34,357,29"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="360,57,392,53,392,58,361,62"/>
+</map>

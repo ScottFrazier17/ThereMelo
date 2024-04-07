@@ -13,16 +13,35 @@ using Unity.VisualScripting;
 using UnityEngine.UI;
 using System.Drawing;
 
+
+/**
+ * @brief This class is used to manage calculate and 
+
+ */
 public class AudioManager : MonoBehaviour
 {
+    /**
+    * @brief Single instance of AudioManager to manage audio across the scene.
+    */
     public static AudioManager instance { get; private set; }
     public GameObject handManagement;
 
-    private ChannelGroup channelGroup;
+    /**
+    * @brief Group of channels for managing audio playback.
+    */
+     private ChannelGroup channelGroup;
+
+     /**
+    * @brief Digital Signal Processing (DSP) unit for performing Fast Fourier Transform (FFT) analysis.
+    */
     private DSP fftDsp;
 
     private float yieldFreq = 3f;
     private Coroutine thread = null;
+
+    /**
+    * @brief Flag to track if audio was playing in the previous frame.
+    */
     private bool wasPlaying = false;
     private HandManager script;
 
@@ -33,6 +52,9 @@ public class AudioManager : MonoBehaviour
     private float curFreq;
     private string note;
 
+    /**
+    * @brief Renderer to visualize audio data.
+    */
     private LineRenderer lineRenderer;
 
     private int points = 25;
@@ -42,6 +64,9 @@ public class AudioManager : MonoBehaviour
     private float phase;
     private float speed = 1f;
 
+    /**
+    * @brief Initializes the AudioManager instance and sets up audio analysis tools.
+    */
     private void Awake()
     {
         if (instance != null)
@@ -74,6 +99,9 @@ public class AudioManager : MonoBehaviour
         lineRenderer.endWidth = lWidth;
     }
 
+    /**
+    * @brief Updates audio analysis and visualizer based on current audio playback state.
+    */
     void Update()
     {
         if (script.isPlaying && !wasPlaying)
@@ -111,6 +139,9 @@ public class AudioManager : MonoBehaviour
         phase += speed * Time.deltaTime;
     }
 
+    /**
+    * @brief Coroutine to perform FFT analysis at set intervals.
+    */
     private IEnumerator FFTAnalysisCoroutine()
     {
         while (script.isPlaying)
@@ -122,10 +153,22 @@ public class AudioManager : MonoBehaviour
 
     private string[] NOTES = { "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#" };
 
+    /**
+    * @brief Converts a color tuple to a UnityEngine.Color.
+    * 
+    * @param colorTuple Tuple representing the RGB values of the color.
+    * @return Converted UnityEngine.Color.
+    */
     private UnityEngine.Color ConvertColor((int, int, int) colorTuple) { 
         return new UnityEngine.Color(colorTuple.Item1 / 255.0f, colorTuple.Item2 / 255.0f, colorTuple.Item3 / 255.0f); 
     }
 
+    /**
+    * @brief Determines the musical note corresponding to a given frequency.
+    * 
+    * @param freq Frequency to determine the note for.
+    * @return String representing the musical note.
+    */
     private string getNote(float freq)
     {
         if (freq == 0f) {
@@ -159,6 +202,9 @@ public class AudioManager : MonoBehaviour
 
     }
 
+    /**
+    * @brief Performs FFT analysis to detect frequency and amplitude of the current audio.
+    */
     void FFTAnalysis()
     {
         //fft dataa
@@ -220,12 +266,25 @@ public class AudioManager : MonoBehaviour
         return frequency;
     }
 
+    /**
+    * @brief Plays an audio clip once at a specified position in the world.
+    * 
+    * @param sound Reference to the FMOD event to play.
+    * @param worldPos World position to play the sound at.
+    */
     public void PlayOneShot(EventReference sound, Vector3 worldPos)
     {
         // plays audio once
         RuntimeManager.PlayOneShot(sound, worldPos);
     }
 
+    /**
+    * @brief Creates and plays an audio event continuously at a specified position in the world.
+    * 
+    * @param sound Reference to the FMOD event to play.
+    * @param worldPos World position to play the sound at.
+    * @return The EventInstance of the playing sound for further manipulation.
+    */
     public EventInstance PlayConstaint(EventReference sound, Vector3 worldPos)
     {
         // Create instance

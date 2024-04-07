@@ -3,20 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
+/**
+ * @brief Animates a GameObject's position in response to audio amplitude, creating a visual representation of sound intensity.
+ */
 public class SoundAnimate : MonoBehaviour
 {
+    /**
+     * @brief Reference to the AudioManager, used to obtain the current amplitude of playing audio.
+     */
     public AudioManager audioManager;
 
+    /**
+     * @brief The GameObject's original local position, used as a base for animation.
+     */
     private Vector3 defaultVec;
     public float speed = 0.0f;
     private float zMovement;
+
+    /**
+     * @brief Flag indicating whether the GameObject is currently moving outwards or returning to its original position.
+     */
     private bool movingOutwards = true;
 
+    /**
+     * @brief Initializes the SoundAnimate script by recording the GameObject's original local position.
+     */
     private void Start()
     {
         defaultVec = transform.localPosition;
     }
 
+    /**
+     * @brief Updates the GameObject's position based on audio amplitude, creating a forward and backward animation effect.
+     */
     void Update()
     {
         if (audioManager != null)

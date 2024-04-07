@@ -1,0 +1,304 @@
+\doxysection{Hand\+Manager Class Reference}
+\hypertarget{class_hand_manager}{}\label{class_hand_manager}\index{HandManager@{HandManager}}
+
+
+Manages hand interactions for There\+Melo, handling input from Leap Motion to control audio parameters.  
+
+
+
+
+Inheritance diagram for Hand\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_hand_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Hand\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hand_manager_a9f070fadcaf357776d70ab1d1a7564ef}\label{class_hand_manager_a9f070fadcaf357776d70ab1d1a7564ef} 
+float {\bfseries get\+Volume} ()
+\item 
+\Hypertarget{class_hand_manager_acd340fc0918823e0a322a241228bca42}\label{class_hand_manager_acd340fc0918823e0a322a241228bca42} 
+void {\bfseries set\+Menu\+Boolean} (bool x)
+\item 
+\Hypertarget{class_hand_manager_a07ba35cd06b3324bb9c0dc20b7d086bf}\label{class_hand_manager_a07ba35cd06b3324bb9c0dc20b7d086bf} 
+void {\bfseries set\+Move\+Pad} (bool x)
+\item 
+\Hypertarget{class_hand_manager_ab6043a9f0b6851dc05e29a612aa98163}\label{class_hand_manager_ab6043a9f0b6851dc05e29a612aa98163} 
+void {\bfseries set\+Move\+Rod} (bool x)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hand_manager_abe87fc2df2ce82ff27336064505e2fd5}\label{class_hand_manager_abe87fc2df2ce82ff27336064505e2fd5} 
+Leap\+Provider {\bfseries leap\+Provider}
+\item 
+bool \mbox{\hyperlink{class_hand_manager_a28c903ff6fb3f2ebc011a7b6db357b2a}{moving\+Pad}} = false
+\begin{DoxyCompactList}\small\item\em Flags to indicate the movement state of the pad, rod, and whether the menu is enabled. \end{DoxyCompactList}\item 
+\Hypertarget{class_hand_manager_afd41d5a7bbd8c482dbb241ab6f94f34e}\label{class_hand_manager_afd41d5a7bbd8c482dbb241ab6f94f34e} 
+bool {\bfseries moving\+Rod} = false
+\item 
+\Hypertarget{class_hand_manager_ab57b7def3d8c2d56cd44ec7f945a8775}\label{class_hand_manager_ab57b7def3d8c2d56cd44ec7f945a8775} 
+bool {\bfseries menu\+Enabled} = false
+\item 
+\Hypertarget{class_hand_manager_ab2e46d5ba121d468892a903228f9138e}\label{class_hand_manager_ab2e46d5ba121d468892a903228f9138e} 
+bool {\bfseries is\+Playing}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_hand_manager_a9da60e26f612877c8bee56f6b780a7d4}\label{class_hand_manager_a9da60e26f612877c8bee56f6b780a7d4} 
+bool {\bfseries moving\+Object}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\Hypertarget{class_hand_manager_a4ed4260a220568b5407eeb355add6acc}\label{class_hand_manager_a4ed4260a220568b5407eeb355add6acc} 
+static \mbox{\hyperlink{class_hand_manager}{Hand\+Manager}} {\bfseries instance}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_hand_manager_af998ff3e973b98c521eae62641c22a9c}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Ensures a single instance of \doxylink{class_hand_manager}{Hand\+Manager} and initializes it. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_manager_a53ef66ec3826b80ee2b17fa377e16874}{update\+Hand}} (string key, object value)
+\begin{DoxyCompactList}\small\item\em Updates the user\textquotesingle{}s hand preference. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_manager_a4819c950a44a6cc5db8cdfe8f0cb0ee5}{On\+Enable}} ()
+\begin{DoxyCompactList}\small\item\em Subscribes to Leap Motion frame updates and user preference changes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_manager_a243d90d79f502f1b3e8304cded5f13d8}{On\+Disable}} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes from Leap Motion frame updates and user preference changes when disabled. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hand_manager_ac7a5904937ee235ccaa63511b9ecb851}{Is\+Playing}} (Event\+Instance instance)
+\begin{DoxyCompactList}\small\item\em Checks if the audio is currently playing. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_hand_manager_a408fdb8eb74980b52decf7f450e6f6ea}{calc\+Closest}} (Hand hand, Game\+Object target\+Obj)
+\begin{DoxyCompactList}\small\item\em Calculates the closest distance from the hand to a target object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_hand_manager_a787717eb4b8c6ec99998a9dc33448428}{On\+Update\+Frame}} (Frame frame)
+\begin{DoxyCompactList}\small\item\em Processes hand data each frame to control audio playback and parameters based on hand position and movement. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_hand_manager_ab170145472b3cbdc4f3f200ee64e486d}{user\+Hand}}
+\begin{DoxyCompactList}\small\item\em Stores the chirality of the user\textquotesingle{}s hand preferred for interaction. \end{DoxyCompactList}\item 
+\Hypertarget{class_hand_manager_a3f316898bda31331f877573ace6fafd0}\label{class_hand_manager_a3f316898bda31331f877573ace6fafd0} 
+float {\bfseries vol}
+\item 
+\Hypertarget{class_hand_manager_aa8c09627430fb65af57a42465334bd17}\label{class_hand_manager_aa8c09627430fb65af57a42465334bd17} 
+float {\bfseries threshold} = 0.\+05f
+\item 
+\Hypertarget{class_hand_manager_a3117bc5459773d606a6fdd37506b9985}\label{class_hand_manager_a3117bc5459773d606a6fdd37506b9985} 
+Studio\+Event\+Emitter {\bfseries audio\+Manager\+Emitter}
+\item 
+Game\+Object \mbox{\hyperlink{class_hand_manager_a48867b13f2b053c78b4a72b72a4fb22f}{volume\+Obj}}
+\begin{DoxyCompactList}\small\item\em Objects representing the control points for volume and pitch. \end{DoxyCompactList}\item 
+\Hypertarget{class_hand_manager_ac82ff93893c695fd15d806389ed74b6d}\label{class_hand_manager_ac82ff93893c695fd15d806389ed74b6d} 
+Game\+Object {\bfseries pitch\+Obj}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages hand interactions for There\+Melo, handling input from Leap Motion to control audio parameters. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hand_manager_af998ff3e973b98c521eae62641c22a9c}\label{class_hand_manager_af998ff3e973b98c521eae62641c22a9c} 
+\index{HandManager@{HandManager}!Awake@{Awake}}
+\index{Awake@{Awake}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Hand\+Manager.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Ensures a single instance of \doxylink{class_hand_manager}{Hand\+Manager} and initializes it. 
+
+\Hypertarget{class_hand_manager_a408fdb8eb74980b52decf7f450e6f6ea}\label{class_hand_manager_a408fdb8eb74980b52decf7f450e6f6ea} 
+\index{HandManager@{HandManager}!calcClosest@{calcClosest}}
+\index{calcClosest@{calcClosest}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{calcClosest()}{calcClosest()}}
+{\footnotesize\ttfamily float Hand\+Manager.\+calc\+Closest (\begin{DoxyParamCaption}\item[{Hand}]{hand,  }\item[{Game\+Object}]{target\+Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Calculates the closest distance from the hand to a target object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hand} & The hand to calculate the distance from. \\
+\hline
+{\em target\+Obj} & The target object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The closest distance between the hand and the target object. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a408fdb8eb74980b52decf7f450e6f6ea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_hand_manager_ac7a5904937ee235ccaa63511b9ecb851}\label{class_hand_manager_ac7a5904937ee235ccaa63511b9ecb851} 
+\index{HandManager@{HandManager}!IsPlaying@{IsPlaying}}
+\index{IsPlaying@{IsPlaying}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{IsPlaying()}{IsPlaying()}}
+{\footnotesize\ttfamily bool Hand\+Manager.\+Is\+Playing (\begin{DoxyParamCaption}\item[{Event\+Instance}]{instance }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Checks if the audio is currently playing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em instance} & The FMOD event instance to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the event instance is playing; false otherwise. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_ac7a5904937ee235ccaa63511b9ecb851_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_hand_manager_a243d90d79f502f1b3e8304cded5f13d8}\label{class_hand_manager_a243d90d79f502f1b3e8304cded5f13d8} 
+\index{HandManager@{HandManager}!OnDisable@{OnDisable}}
+\index{OnDisable@{OnDisable}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{OnDisable()}{OnDisable()}}
+{\footnotesize\ttfamily void Hand\+Manager.\+On\+Disable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Unsubscribes from Leap Motion frame updates and user preference changes when disabled. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a243d90d79f502f1b3e8304cded5f13d8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_hand_manager_a4819c950a44a6cc5db8cdfe8f0cb0ee5}\label{class_hand_manager_a4819c950a44a6cc5db8cdfe8f0cb0ee5} 
+\index{HandManager@{HandManager}!OnEnable@{OnEnable}}
+\index{OnEnable@{OnEnable}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{OnEnable()}{OnEnable()}}
+{\footnotesize\ttfamily void Hand\+Manager.\+On\+Enable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Subscribes to Leap Motion frame updates and user preference changes. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a4819c950a44a6cc5db8cdfe8f0cb0ee5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_hand_manager_a787717eb4b8c6ec99998a9dc33448428}\label{class_hand_manager_a787717eb4b8c6ec99998a9dc33448428} 
+\index{HandManager@{HandManager}!OnUpdateFrame@{OnUpdateFrame}}
+\index{OnUpdateFrame@{OnUpdateFrame}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{OnUpdateFrame()}{OnUpdateFrame()}}
+{\footnotesize\ttfamily void Hand\+Manager.\+On\+Update\+Frame (\begin{DoxyParamCaption}\item[{Frame}]{frame }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Processes hand data each frame to control audio playback and parameters based on hand position and movement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frame} & The current frame of hand data from Leap Motion. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a787717eb4b8c6ec99998a9dc33448428_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a787717eb4b8c6ec99998a9dc33448428_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_hand_manager_a53ef66ec3826b80ee2b17fa377e16874}\label{class_hand_manager_a53ef66ec3826b80ee2b17fa377e16874} 
+\index{HandManager@{HandManager}!updateHand@{updateHand}}
+\index{updateHand@{updateHand}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{updateHand()}{updateHand()}}
+{\footnotesize\ttfamily void Hand\+Manager.\+update\+Hand (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{object}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the user\textquotesingle{}s hand preference. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The preference key to be updated. \\
+\hline
+{\em value} & The new value for the preference. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_hand_manager_a53ef66ec3826b80ee2b17fa377e16874_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_hand_manager_a28c903ff6fb3f2ebc011a7b6db357b2a}\label{class_hand_manager_a28c903ff6fb3f2ebc011a7b6db357b2a} 
+\index{HandManager@{HandManager}!movingPad@{movingPad}}
+\index{movingPad@{movingPad}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{movingPad}{movingPad}}
+{\footnotesize\ttfamily bool Hand\+Manager.\+moving\+Pad = false}
+
+
+
+Flags to indicate the movement state of the pad, rod, and whether the menu is enabled. 
+
+\Hypertarget{class_hand_manager_ab170145472b3cbdc4f3f200ee64e486d}\label{class_hand_manager_ab170145472b3cbdc4f3f200ee64e486d} 
+\index{HandManager@{HandManager}!userHand@{userHand}}
+\index{userHand@{userHand}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{userHand}{userHand}}
+{\footnotesize\ttfamily string Hand\+Manager.\+user\+Hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the chirality of the user\textquotesingle{}s hand preferred for interaction. 
+
+\Hypertarget{class_hand_manager_a48867b13f2b053c78b4a72b72a4fb22f}\label{class_hand_manager_a48867b13f2b053c78b4a72b72a4fb22f} 
+\index{HandManager@{HandManager}!volumeObj@{volumeObj}}
+\index{volumeObj@{volumeObj}!HandManager@{HandManager}}
+\doxysubsubsection{\texorpdfstring{volumeObj}{volumeObj}}
+{\footnotesize\ttfamily Game\+Object Hand\+Manager.\+volume\+Obj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Objects representing the control points for volume and pitch. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Hands/Hand\+Manager.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="AudioManager.getNote" name="AudioManager.getNote">
+<area shape="rect" id="Node000001" title="Determines the musical note corresponding to a given frequency." alt="" coords="659,13,813,39"/>
+<area shape="rect" id="Node000002" href="$class_audio_manager.html#aeab8416413e5b8bde537308ac7d8ea9b" title="Performs FFT analysis to detect frequency and amplitude of the current audio." alt="" coords="431,13,611,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="643,28,612,28,612,23,643,23"/>
+<area shape="rect" id="Node000003" href="$class_audio_manager.html#aec6c5c676958ecb69927977a527d3334" title="Coroutine to perform FFT analysis at set intervals." alt="" coords="203,5,383,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="416,28,383,28,383,23,416,23"/>
+<area shape="rect" id="Node000004" href="$class_audio_manager.html#a220892c97c3955571e2408733a917dbc" title="Updates audio analysis and visualizer based on current audio playback state." alt="" coords="5,13,155,39"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="187,28,155,28,155,23,187,23"/>
+</map>

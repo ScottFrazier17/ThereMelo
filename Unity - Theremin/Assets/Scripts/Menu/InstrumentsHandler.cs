@@ -7,19 +7,51 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using static UnityEngine.GraphicsBuffer;
 
+/**
+ * @brief Handles instrument sound changes and UI interactions for selecting different instruments.
+ */
 public class InstrumentsHandler : MonoBehaviour
 {
+    /**
+     * @brief Tracks the state of the menu (open or closed).
+     */
     private bool menuBool = false;
     private Coroutine mover;
+
+    /**
+     * @brief References to the volume slider, instrument menu, and icon within the UI.
+     */
     private GameObject volumeSlider, instrumentMenu, icon;
     private Camera mainCamera;
 
+    /**
+     * @brief Reference to the AudioManager for playing sounds.
+     */
     [SerializeField] private AudioManager audioManager;
+
+    /**
+     * @brief The UI GameObject that contains the volume slider and instrument menu.
+     */
     [SerializeField] private GameObject UI;
+
+    /**
+     * @brief The icon to display when an instrument is selected.
+     */
     [SerializeField] private Sprite selectedIcon;
+
+    /**
+     * @brief An array of EventReferences representing the different sounds for each instrument.
+     */
     [SerializeField] private EventReference[] Sounds;
+
+    /**
+     * @brief StudioEventEmitter used to emit sound events.
+     */
     [SerializeField] private StudioEventEmitter emitter;
 
+    /**
+     * @brief Initializes the handler, finding necessary components in the UI.
+     */
     private void Start()
     {
         volumeSlider = UI.transform.Find("Slider Panel").gameObject;
@@ -29,6 +61,11 @@ public class InstrumentsHandler : MonoBehaviour
         mainCamera = Camera.main;
     }
 
+    /**
+     * @brief Changes the sound of the instrument to the one specified by soundName.
+     * 
+     * @param soundName The name of the sound to change to.
+     */
     public void changeSound(string soundName)
     {
         string path = "event:/Instruments/" + soundName;
@@ -41,6 +78,14 @@ public class InstrumentsHandler : MonoBehaviour
     }
 
     // mover
+
+    /**
+     * @brief Coroutine that moves the volume slider to the target position over the specified duration.
+     * 
+     * @param target The target position for the volume slider.
+     * @param dur The duration over which to move the slider.
+     * @return IEnumerator for coroutine management.
+     */
     IEnumerator MoveTo(Vector3 target, float dur)
     {
         Vector3 startPosition = volumeSlider.transform.localPosition;
@@ -52,10 +97,14 @@ public class InstrumentsHandler : MonoBehaviour
             timeElapsed += Time.deltaTime;
             yield return null;
         }
-
         volumeSlider.transform.localPosition = target;
     }
 
+    /**
+     * @brief Toggles the instrument menu open or closed, optionally forcing it to close.
+     * 
+     * @param forceClose If true, forces the menu to close; otherwise, toggles the menu based on its current state.
+     */
     public void toggleMenu(bool forceClose)
     {
         // set menuBool opposite of itself
@@ -85,10 +134,8 @@ public class InstrumentsHandler : MonoBehaviour
             volumeSlider.transform.localPosition = tar;
             icon.GetComponent<SpriteRenderer>().sprite = selectedIcon;
         }
-        
 
         // toggle menu
         instrumentMenu.SetActive(menuBool);
     }
-
 }

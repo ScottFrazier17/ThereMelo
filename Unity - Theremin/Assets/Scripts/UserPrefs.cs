@@ -6,21 +6,49 @@ using System.Net.Mail;
 using UnityEngine;
 using static UnityEngine.Rendering.DebugUI;
 
+/**
+ * @brief Manages user preferences for a VR application, including hand dominance and volume settings.
+ */
 public class UserPrefs : MonoBehaviour
 {
+    /**
+     * @brief Stores the user's hand preference.
+     */
     private string userHand;
+
+    /**
+     * @brief Stores the user's preferred volume level.
+     */
     private float userVolume;
+
+    /**
+     * @brief Delegate for handling preference change events.
+     */
     public delegate void PreferenceChangedEventHandler(string key, object value);
+
+    /**
+     * @brief Event triggered when a preference changes.
+     */
     public static event PreferenceChangedEventHandler OnPreferenceChanged;
 
     private GameObject rod, pad;
+
+    /**
+     * @brief Anchors for left and right hand positions.
+     */
     private Anchor left, right;
 
     [SerializeField] private GameObject MenuUI, VolumeBar, leftHand, rightHand;
-
     [SerializeField] private HandModelBase lHandGeneric, rHandGeneric;
     [SerializeField] private GameObject menuAttachment, ThereminObject;
 
+    /**
+     * @brief Initializes user preferences, setting default values if none are found.
+     * @details This sets by default the following settings to their resepects values
+     * UserHand: Right
+     * UserVolume: 0.5F
+     * MasterVolume: userVolume
+     */
     void Start() {
         // on launch, load prefs. if no prefs are found, load defaults
         userHand = PlayerPrefs.GetString("UserHand", "Right");
@@ -42,11 +70,19 @@ public class UserPrefs : MonoBehaviour
         setHand(userHand);
     }
     
+    /**
+     * @brief Updates the user volume preference based on interaction with the volume bar.
+     */
     public void updateValues() {
         float newVal = VolumeBar.GetComponent<InteractionSlider>().HorizontalSliderValue;
         PlayerPrefs.SetFloat("UserVolume", newVal);
     }
 
+    /**
+     * @brief Swaps the positions of the rod and pad based on the user's hand dominance.
+     * 
+     * @param Hand The hand dominance to swap anchors for.
+     */
     private void swapAnchors(string Hand)
     {
         // get anchorables
@@ -67,6 +103,11 @@ public class UserPrefs : MonoBehaviour
         pBehaviour.TryAttachToNearestAnchor();
     }
 
+    /**
+     * @brief Sets the user's hand dominance, updating UI elements and interaction anchors accordingly.
+     * 
+     * @param Hand The hand dominance (either "Left" or "Right").
+     */
     public void setHand(string Hand)
     {
         Material domMat = Resources.Load<Material>("Dominant");
@@ -126,7 +167,5 @@ public class UserPrefs : MonoBehaviour
         userHand = Hand;
         PlayerPrefs.SetString("UserHand", Hand);
         OnPreferenceChanged?.Invoke("UserHand", Hand);
-
     }
-
 }
