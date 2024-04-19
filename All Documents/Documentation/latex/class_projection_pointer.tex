@@ -1,0 +1,140 @@
+\doxysection{Projection\+Pointer Class Reference}
+\hypertarget{class_projection_pointer}{}\label{class_projection_pointer}\index{ProjectionPointer@{ProjectionPointer}}
+
+
+Manages the projection pointer for Leap Motion interaction, rendering a line between the hand and a UI cursor.  
+
+
+
+
+Inheritance diagram for Projection\+Pointer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=170pt]{class_projection_pointer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Projection\+Pointer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_projection_pointer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_projection_pointer_a86c2c1ab691118e0c39df2acb97f0b11}\label{class_projection_pointer_a86c2c1ab691118e0c39df2acb97f0b11} 
+float {\bfseries lerp\+Speed} = 10
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_projection_pointer_abe7ee0890f6b2b5fe77dd8175f094d34}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the projection pointer by obtaining the Leap data provider from the UIInput\+Module. See UIInput\+Module for more information on this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_projection_pointer_a044b6574debe04bb121bb73e985e76fb}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates the projection pointer, drawing a line from the hand to the UI cursor based on current Leap Motion data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+UIInput\+Module \mbox{\hyperlink{class_projection_pointer_a283c9302de5e65e05b03ccb0aa90892f}{module}}
+\begin{DoxyCompactList}\small\item\em Reference to the UIInput\+Module, used to obtain Leap data provider and interaction mode. \end{DoxyCompactList}\item 
+Chirality \mbox{\hyperlink{class_projection_pointer_addbd07a2c3d0698770873093575d144a}{chirality}}
+\begin{DoxyCompactList}\small\item\em Specifies the hand chirality (left or right) to track with the projection pointer. \end{DoxyCompactList}\item 
+Line\+Renderer \mbox{\hyperlink{class_projection_pointer_a3efcfcc8595a38ae43f0d371ab7d5c3a}{line}}
+\begin{DoxyCompactList}\small\item\em Line\+Renderer component used to draw the line between the hand and the cursor. \end{DoxyCompactList}\item 
+UIInput\+Cursor \mbox{\hyperlink{class_projection_pointer_a0ee850d5e22f227bae2cf293d8f2d571}{cursor}}
+\begin{DoxyCompactList}\small\item\em Reference to the UIInput\+Cursor, marking the target position for the projection pointer. \end{DoxyCompactList}\item 
+\Hypertarget{class_projection_pointer_aefdcb915d56aeb92424d19e44b418626}\label{class_projection_pointer_aefdcb915d56aeb92424d19e44b418626} 
+Leap\+Provider {\bfseries leap\+Data\+Provider}
+\item 
+Hand \mbox{\hyperlink{class_projection_pointer_ab40e4af9bce522350ab2c14dc3594fb0}{hand}}
+\begin{DoxyCompactList}\small\item\em Stores the current hand data from Leap Motion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages the projection pointer for Leap Motion interaction, rendering a line between the hand and a UI cursor. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_projection_pointer_abe7ee0890f6b2b5fe77dd8175f094d34}\label{class_projection_pointer_abe7ee0890f6b2b5fe77dd8175f094d34} 
+\index{ProjectionPointer@{ProjectionPointer}!Awake@{Awake}}
+\index{Awake@{Awake}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Projection\+Pointer.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes the projection pointer by obtaining the Leap data provider from the UIInput\+Module. See UIInput\+Module for more information on this. 
+
+\Hypertarget{class_projection_pointer_a044b6574debe04bb121bb73e985e76fb}\label{class_projection_pointer_a044b6574debe04bb121bb73e985e76fb} 
+\index{ProjectionPointer@{ProjectionPointer}!Update@{Update}}
+\index{Update@{Update}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Projection\+Pointer.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates the projection pointer, drawing a line from the hand to the UI cursor based on current Leap Motion data. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_projection_pointer_addbd07a2c3d0698770873093575d144a}\label{class_projection_pointer_addbd07a2c3d0698770873093575d144a} 
+\index{ProjectionPointer@{ProjectionPointer}!chirality@{chirality}}
+\index{chirality@{chirality}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{chirality}{chirality}}
+{\footnotesize\ttfamily Chirality Projection\+Pointer.\+chirality\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Specifies the hand chirality (left or right) to track with the projection pointer. 
+
+\Hypertarget{class_projection_pointer_a0ee850d5e22f227bae2cf293d8f2d571}\label{class_projection_pointer_a0ee850d5e22f227bae2cf293d8f2d571} 
+\index{ProjectionPointer@{ProjectionPointer}!cursor@{cursor}}
+\index{cursor@{cursor}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{cursor}{cursor}}
+{\footnotesize\ttfamily UIInput\+Cursor Projection\+Pointer.\+cursor\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the UIInput\+Cursor, marking the target position for the projection pointer. 
+
+\Hypertarget{class_projection_pointer_ab40e4af9bce522350ab2c14dc3594fb0}\label{class_projection_pointer_ab40e4af9bce522350ab2c14dc3594fb0} 
+\index{ProjectionPointer@{ProjectionPointer}!hand@{hand}}
+\index{hand@{hand}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{hand}{hand}}
+{\footnotesize\ttfamily Hand Projection\+Pointer.\+hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the current hand data from Leap Motion. 
+
+\Hypertarget{class_projection_pointer_a3efcfcc8595a38ae43f0d371ab7d5c3a}\label{class_projection_pointer_a3efcfcc8595a38ae43f0d371ab7d5c3a} 
+\index{ProjectionPointer@{ProjectionPointer}!line@{line}}
+\index{line@{line}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily Line\+Renderer Projection\+Pointer.\+line\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Line\+Renderer component used to draw the line between the hand and the cursor. 
+
+\Hypertarget{class_projection_pointer_a283c9302de5e65e05b03ccb0aa90892f}\label{class_projection_pointer_a283c9302de5e65e05b03ccb0aa90892f} 
+\index{ProjectionPointer@{ProjectionPointer}!module@{module}}
+\index{module@{module}!ProjectionPointer@{ProjectionPointer}}
+\doxysubsubsection{\texorpdfstring{module}{module}}
+{\footnotesize\ttfamily UIInput\+Module Projection\+Pointer.\+module\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the UIInput\+Module, used to obtain Leap data provider and interaction mode. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Cursors/Projection\+Pointer.\+cs\end{DoxyCompactItemize}

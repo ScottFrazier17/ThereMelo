@@ -1,0 +1,5 @@
+<map id="InstrumentsHandler.toggleMenu" name="InstrumentsHandler.toggleMenu">
+<area shape="rect" id="Node000001" title="Toggles the instrument menu open or closed, optionally forcing it to close." alt="" coords="5,5,211,31"/>
+<area shape="rect" id="Node000002" href="$class_instruments_handler.html#a47dbeeeda91f036199f16a78ef00d809" title="Coroutine that moves the volume slider to the target position over the specified duration." alt="" coords="259,5,443,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,16,243,16,243,21,211,21"/>
+</map>

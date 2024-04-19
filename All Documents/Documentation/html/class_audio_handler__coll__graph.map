@@ -1,0 +1,11 @@
+<map id="AudioHandler" name="AudioHandler">
+<area shape="rect" id="Node000001" title="Handles audio playback and effects for a virtual music instrument in ThereMelo." alt="" coords="213,94,312,120"/>
+<area shape="rect" id="Node000002" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,35,235,91,233,96,102,40"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="141,5,256,31"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="210,44,223,68,247,92,243,95,219,72,205,47"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="281,5,375,31"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="317,46,300,72,278,95,274,92,296,68,313,43"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="399,5,504,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="418,41,357,72,298,96,296,91,355,68,416,36"/>
+</map>

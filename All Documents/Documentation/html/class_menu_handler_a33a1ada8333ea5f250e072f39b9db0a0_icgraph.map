@@ -1,0 +1,5 @@
+<map id="MenuHandler.Shrink" name="MenuHandler.Shrink">
+<area shape="rect" id="Node000001" title="Coroutine to animate the menu shrinking to disappear." alt="" coords="222,5,360,31"/>
+<area shape="rect" id="Node000002" href="$class_menu_handler.html#abeb7ee608f6fda8742fde2a2b1b0e3ad" title="Toggles the menu&#39;s visibility, optionally forcing it to close, with animations and sound effects." alt="" coords="5,5,174,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,21,174,21,174,16,206,16"/>
+</map>

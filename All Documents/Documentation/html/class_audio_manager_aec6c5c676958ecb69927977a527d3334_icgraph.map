@@ -1,0 +1,5 @@
+<map id="AudioManager.FFTAnalysisCoroutine" name="AudioManager.FFTAnalysisCoroutine">
+<area shape="rect" id="Node000001" title="Coroutine to perform FFT analysis at set intervals." alt="" coords="203,5,383,46"/>
+<area shape="rect" id="Node000002" href="$class_audio_manager.html#a220892c97c3955571e2408733a917dbc" title="Updates audio analysis and visualizer based on current audio playback state." alt="" coords="5,13,155,39"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="187,28,155,28,155,23,187,23"/>
+</map>

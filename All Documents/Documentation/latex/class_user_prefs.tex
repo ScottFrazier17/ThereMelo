@@ -1,0 +1,239 @@
+\doxysection{User\+Prefs Class Reference}
+\hypertarget{class_user_prefs}{}\label{class_user_prefs}\index{UserPrefs@{UserPrefs}}
+
+
+Manages user preferences for a VR application, including hand dominance and volume settings.  
+
+
+
+
+Inheritance diagram for User\+Prefs\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_user_prefs__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for User\+Prefs\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_prefs__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+delegate void \mbox{\hyperlink{class_user_prefs_a2f87c3dd87cb6e40a504f29b5efd1749}{Preference\+Changed\+Event\+Handler}} (string key, object value)
+\begin{DoxyCompactList}\small\item\em Delegate for handling preference change events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_prefs_afb6f908d500f3aba4d07abae9a8db61a}{update\+Values}} ()
+\begin{DoxyCompactList}\small\item\em Updates the user volume preference based on interaction with the volume bar. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_prefs_af7546ec44e2595488876b6b76a89d800}{set\+Hand}} (string Hand)
+\begin{DoxyCompactList}\small\item\em Sets the user\textquotesingle{}s hand dominance, updating UI elements and interaction anchors accordingly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_user_prefs_a2f87c3dd87cb6e40a504f29b5efd1749}{Preference\+Changed\+Event\+Handler}} \mbox{\hyperlink{class_user_prefs_aa60b0d7366258c4a56629ec1697345f5}{On\+Preference\+Changed}}
+\begin{DoxyCompactList}\small\item\em Event triggered when a preference changes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_user_prefs_a3faf8eb1ce60025fab8da601377a2b75}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initializes user preferences, setting default values if none are found. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_user_prefs_ac6495463b48a93650f4a958707ad0315}{swap\+Anchors}} (string Hand)
+\begin{DoxyCompactList}\small\item\em Swaps the positions of the rod and pad based on the user\textquotesingle{}s hand dominance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_user_prefs_acc99c5714218f17b4d7c47f638ffcef7}{user\+Hand}}
+\begin{DoxyCompactList}\small\item\em Stores the user\textquotesingle{}s hand preference. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_user_prefs_ace034cd6e80a57a24a06bc953fbfd753}{user\+Volume}}
+\begin{DoxyCompactList}\small\item\em Stores the user\textquotesingle{}s preferred volume level. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_prefs_a59ce0941c4593eb7b913fe56b5c21f75}\label{class_user_prefs_a59ce0941c4593eb7b913fe56b5c21f75} 
+Game\+Object {\bfseries rod}
+\item 
+\Hypertarget{class_user_prefs_a6e77d75addb036287faec25338502a92}\label{class_user_prefs_a6e77d75addb036287faec25338502a92} 
+Game\+Object {\bfseries pad}
+\item 
+Anchor \mbox{\hyperlink{class_user_prefs_a52069bf85b8677e8a9ba7c59ac831b81}{left}}
+\begin{DoxyCompactList}\small\item\em Anchors for left and right hand positions. \end{DoxyCompactList}\item 
+\Hypertarget{class_user_prefs_a76d379e339ad594b1b2695b6397970ca}\label{class_user_prefs_a76d379e339ad594b1b2695b6397970ca} 
+Anchor {\bfseries right}
+\item 
+\Hypertarget{class_user_prefs_ab314e97e800f7a993a36253fc39f08b3}\label{class_user_prefs_ab314e97e800f7a993a36253fc39f08b3} 
+Game\+Object {\bfseries Menu\+UI}
+\item 
+\Hypertarget{class_user_prefs_a6e9403ec3ceed1654469c37b9e380f1e}\label{class_user_prefs_a6e9403ec3ceed1654469c37b9e380f1e} 
+Game\+Object {\bfseries Volume\+Bar}
+\item 
+\Hypertarget{class_user_prefs_ad63e298fd967c50a2df43ad02fa90cd7}\label{class_user_prefs_ad63e298fd967c50a2df43ad02fa90cd7} 
+Game\+Object {\bfseries left\+Hand}
+\item 
+\Hypertarget{class_user_prefs_a443f1f857e99c8fc6b4265bbf5773aeb}\label{class_user_prefs_a443f1f857e99c8fc6b4265bbf5773aeb} 
+Game\+Object {\bfseries right\+Hand}
+\item 
+\Hypertarget{class_user_prefs_aef3b1e36c76196d12be0003f0dcead81}\label{class_user_prefs_aef3b1e36c76196d12be0003f0dcead81} 
+Hand\+Model\+Base {\bfseries l\+Hand\+Generic}
+\item 
+\Hypertarget{class_user_prefs_a356dc9344b31557f02b12eae0fa870fc}\label{class_user_prefs_a356dc9344b31557f02b12eae0fa870fc} 
+Hand\+Model\+Base {\bfseries r\+Hand\+Generic}
+\item 
+\Hypertarget{class_user_prefs_ab76c91b6384c73ac8e00f8224ae6367c}\label{class_user_prefs_ab76c91b6384c73ac8e00f8224ae6367c} 
+Game\+Object {\bfseries menu\+Attachment}
+\item 
+\Hypertarget{class_user_prefs_ac3edabaa6704ef08a5b7ad724c88796d}\label{class_user_prefs_ac3edabaa6704ef08a5b7ad724c88796d} 
+Game\+Object {\bfseries Theremin\+Object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages user preferences for a VR application, including hand dominance and volume settings. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_user_prefs_a2f87c3dd87cb6e40a504f29b5efd1749}\label{class_user_prefs_a2f87c3dd87cb6e40a504f29b5efd1749} 
+\index{UserPrefs@{UserPrefs}!PreferenceChangedEventHandler@{PreferenceChangedEventHandler}}
+\index{PreferenceChangedEventHandler@{PreferenceChangedEventHandler}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{PreferenceChangedEventHandler()}{PreferenceChangedEventHandler()}}
+{\footnotesize\ttfamily delegate void User\+Prefs.\+Preference\+Changed\+Event\+Handler (\begin{DoxyParamCaption}\item[{string}]{key,  }\item[{object}]{value }\end{DoxyParamCaption})}
+
+
+
+Delegate for handling preference change events. 
+
+\Hypertarget{class_user_prefs_af7546ec44e2595488876b6b76a89d800}\label{class_user_prefs_af7546ec44e2595488876b6b76a89d800} 
+\index{UserPrefs@{UserPrefs}!setHand@{setHand}}
+\index{setHand@{setHand}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{setHand()}{setHand()}}
+{\footnotesize\ttfamily void User\+Prefs.\+set\+Hand (\begin{DoxyParamCaption}\item[{string}]{Hand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the user\textquotesingle{}s hand dominance, updating UI elements and interaction anchors accordingly. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hand} & The hand dominance (either "{}\+Left"{} or "{}\+Right"{}). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_user_prefs_af7546ec44e2595488876b6b76a89d800_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_user_prefs_af7546ec44e2595488876b6b76a89d800_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_prefs_a3faf8eb1ce60025fab8da601377a2b75}\label{class_user_prefs_a3faf8eb1ce60025fab8da601377a2b75} 
+\index{UserPrefs@{UserPrefs}!Start@{Start}}
+\index{Start@{Start}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void User\+Prefs.\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes user preferences, setting default values if none are found. 
+
+This sets by default the following settings to their resepects values User\+Hand\+: Right User\+Volume\+: 0.\+5F Master\+Volume\+: user\+Volume Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_prefs_a3faf8eb1ce60025fab8da601377a2b75_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_prefs_ac6495463b48a93650f4a958707ad0315}\label{class_user_prefs_ac6495463b48a93650f4a958707ad0315} 
+\index{UserPrefs@{UserPrefs}!swapAnchors@{swapAnchors}}
+\index{swapAnchors@{swapAnchors}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{swapAnchors()}{swapAnchors()}}
+{\footnotesize\ttfamily void User\+Prefs.\+swap\+Anchors (\begin{DoxyParamCaption}\item[{string}]{Hand }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Swaps the positions of the rod and pad based on the user\textquotesingle{}s hand dominance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Hand} & The hand dominance to swap anchors for. \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_user_prefs_ac6495463b48a93650f4a958707ad0315_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_user_prefs_afb6f908d500f3aba4d07abae9a8db61a}\label{class_user_prefs_afb6f908d500f3aba4d07abae9a8db61a} 
+\index{UserPrefs@{UserPrefs}!updateValues@{updateValues}}
+\index{updateValues@{updateValues}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{updateValues()}{updateValues()}}
+{\footnotesize\ttfamily void User\+Prefs.\+update\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates the user volume preference based on interaction with the volume bar. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_user_prefs_a52069bf85b8677e8a9ba7c59ac831b81}\label{class_user_prefs_a52069bf85b8677e8a9ba7c59ac831b81} 
+\index{UserPrefs@{UserPrefs}!left@{left}}
+\index{left@{left}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily Anchor User\+Prefs.\+left\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Anchors for left and right hand positions. 
+
+\Hypertarget{class_user_prefs_acc99c5714218f17b4d7c47f638ffcef7}\label{class_user_prefs_acc99c5714218f17b4d7c47f638ffcef7} 
+\index{UserPrefs@{UserPrefs}!userHand@{userHand}}
+\index{userHand@{userHand}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{userHand}{userHand}}
+{\footnotesize\ttfamily string User\+Prefs.\+user\+Hand\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the user\textquotesingle{}s hand preference. 
+
+\Hypertarget{class_user_prefs_ace034cd6e80a57a24a06bc953fbfd753}\label{class_user_prefs_ace034cd6e80a57a24a06bc953fbfd753} 
+\index{UserPrefs@{UserPrefs}!userVolume@{userVolume}}
+\index{userVolume@{userVolume}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{userVolume}{userVolume}}
+{\footnotesize\ttfamily float User\+Prefs.\+user\+Volume\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Stores the user\textquotesingle{}s preferred volume level. 
+
+
+
+\doxysubsection{Event Documentation}
+\Hypertarget{class_user_prefs_aa60b0d7366258c4a56629ec1697345f5}\label{class_user_prefs_aa60b0d7366258c4a56629ec1697345f5} 
+\index{UserPrefs@{UserPrefs}!OnPreferenceChanged@{OnPreferenceChanged}}
+\index{OnPreferenceChanged@{OnPreferenceChanged}!UserPrefs@{UserPrefs}}
+\doxysubsubsection{\texorpdfstring{OnPreferenceChanged}{OnPreferenceChanged}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_user_prefs_a2f87c3dd87cb6e40a504f29b5efd1749}{Preference\+Changed\+Event\+Handler}} User\+Prefs.\+On\+Preference\+Changed\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Event triggered when a preference changes. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+User\+Prefs.\+cs\end{DoxyCompactItemize}

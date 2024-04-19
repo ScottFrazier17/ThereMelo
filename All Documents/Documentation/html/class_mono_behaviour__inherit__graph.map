@@ -1,0 +1,33 @@
+<map id="MonoBehaviour" name="MonoBehaviour">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,351,117,376"/>
+<area shape="rect" id="Node000002" href="$class_audio_handler.html" title="Handles audio playback and effects for a virtual music instrument in ThereMelo." alt="" coords="183,5,282,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="61,335,67,275,82,196,96,155,113,113,135,75,163,40,181,28,184,32,166,44,139,78,118,116,101,156,88,198,72,276,66,335"/>
+<area shape="rect" id="Node000003" href="$class_audio_manager.html" title="This class is used to manage calculate and." alt="" coords="180,55,285,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="63,335,71,283,89,218,118,150,139,118,163,90,178,79,181,83,166,93,143,121,123,152,94,219,77,284,68,336"/>
+<area shape="rect" id="Node000004" href="$class_change_volume.html" title=" " alt="" coords="177,104,288,130"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="65,335,77,292,96,240,124,186,142,161,163,139,179,128,182,132,166,143,146,164,129,189,101,242,82,294,70,336"/>
+<area shape="rect" id="Node000005" href="$class_color_lerp.html" title=" " alt="" coords="194,153,271,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="69,335,103,262,130,223,163,188,192,172,194,177,166,192,134,226,108,265,74,337"/>
+<area shape="rect" id="Node000006" href="$class_floaty_effect.html" title="Creates a floating effect on the GameObject to which it&#39;s attached by periodically adjusting its vert..." alt="" coords="186,203,279,228"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="76,336,112,286,136,260,163,237,185,226,187,230,166,242,140,264,116,290,80,339"/>
+<area shape="rect" id="Node000007" href="$class_hand_manager.html" title="Manages hand interactions for ThereMelo, handling input from Leap Motion to control audio parameters." alt="" coords="181,252,284,278"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="88,338,123,312,163,286,187,276,189,281,166,291,126,316,91,343"/>
+<area shape="rect" id="Node000008" href="$class_instruments_handler.html" title="Handles instrument sound changes and UI interactions for selecting different instruments." alt="" coords="165,301,300,327"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="122,343,184,325,186,330,124,348"/>
+<area shape="rect" id="Node000009" href="$class_menu_handler.html" title="Manages the appearance and disappearance of a menu through animation and audio feedback." alt="" coords="183,351,282,376"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="132,361,183,361,183,366,132,366"/>
+<area shape="rect" id="Node000010" href="$class_pop_up_text.html" title="Displays popup text on the screen by updating a TextMeshProUGUI component with provided advice text." alt="" coords="189,400,276,426"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="124,379,190,398,188,403,122,384"/>
+<area shape="rect" id="Node000011" href="$class_projection_pointer.html" title="Manages the projection pointer for Leap Motion interaction, rendering a line between the hand and a U..." alt="" coords="172,449,293,475"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="91,384,126,411,166,436,189,446,187,451,163,441,123,415,88,389"/>
+<area shape="rect" id="Node000012" href="$class_skybox_manager.html" title="Manages the rotation of the skybox in response to the music playing status from HandManager." alt="" coords="175,499,290,524"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="80,388,116,437,140,463,166,485,185,496,183,500,163,490,136,467,112,441,76,391"/>
+<area shape="rect" id="Node000013" href="$class_sound_animate.html" title="Animates a GameObject&#39;s position in response to audio amplitude, creating a visual representation of ..." alt="" coords="179,548,286,574"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="74,390,108,462,134,501,166,535,183,545,180,550,163,539,130,504,103,465,69,392"/>
+<area shape="rect" id="Node000014" href="$class_spin_effect.html" title=" " alt="" coords="191,597,274,623"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="70,391,82,433,101,485,129,538,146,563,166,584,192,599,189,604,163,588,142,566,124,541,96,487,77,435,65,392"/>
+<area shape="rect" id="Node000015" href="$class_squishy_pointer.html" title="Represents a squishy pointer that visualizes hand pinching actions using Leap Motion." alt="" coords="178,647,287,672"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="68,391,77,443,94,508,123,575,143,606,166,634,181,644,178,648,163,637,139,609,118,577,89,509,71,444,63,392"/>
+<area shape="rect" id="Node000016" href="$class_user_prefs.html" title="Manages user preferences for a VR application, including hand dominance and volume settings." alt="" coords="192,696,273,722"/>
+<area shape="poly" id="edge15_Node000001_Node000016" title=" " alt="" coords="66,392,72,451,88,529,101,571,118,611,139,649,167,683,179,692,193,699,191,704,176,697,163,687,135,652,113,614,96,572,82,531,67,452,61,392"/>
+</map>

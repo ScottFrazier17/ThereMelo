@@ -1,0 +1,80 @@
+\doxysection{Color\+Lerp Class Reference}
+\hypertarget{class_color_lerp}{}\label{class_color_lerp}\index{ColorLerp@{ColorLerp}}
+
+
+Inheritance diagram for Color\+Lerp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_color_lerp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Color\+Lerp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_color_lerp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_color_lerp_a33ec8908828ec9ef33bde6266760fe6a}\label{class_color_lerp_a33ec8908828ec9ef33bde6266760fe6a} 
+void {\bfseries start\+Lerp} (int note\+Index)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_color_lerp_a2ef31d527edeb4e915f101db7f107c07}\label{class_color_lerp_a2ef31d527edeb4e915f101db7f107c07} 
+Color {\bfseries convert\+Color} ((int, int, int) color\+Tuple)
+\item 
+\Hypertarget{class_color_lerp_a2d83018fefa6c353acaaa291086333bd}\label{class_color_lerp_a2d83018fefa6c353acaaa291086333bd} 
+IEnumerator {\bfseries lerp\+Color} (Game\+Object obj, Color target\+Color, float dur)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_color_lerp_a46e652237aa76339bd1ac59dfc4caad3}\label{class_color_lerp_a46e652237aa76339bd1ac59dfc4caad3} 
+{\bfseries int}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_color_lerp_a91699827ed2be418e7de6a7b95bf2398}{note\+Colors}}
+\item 
+\Hypertarget{class_color_lerp_ac5cab62e4a8ef8ca203a1cd49a7b2568}\label{class_color_lerp_ac5cab62e4a8ef8ca203a1cd49a7b2568} 
+Dictionary$<$ Game\+Object, Coroutine $>$ {\bfseries lerp\+Coroutines} = new Dictionary$<$Game\+Object, Coroutine$>$()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_color_lerp_a91699827ed2be418e7de6a7b95bf2398}\label{class_color_lerp_a91699827ed2be418e7de6a7b95bf2398} 
+\index{ColorLerp@{ColorLerp}!noteColors@{noteColors}}
+\index{noteColors@{noteColors}!ColorLerp@{ColorLerp}}
+\doxysubsubsection{\texorpdfstring{noteColors}{noteColors}}
+{\footnotesize\ttfamily int \mbox{[}$\,$\mbox{]} Color\+Lerp.\+note\+Colors\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (58,\ 92,\ 255),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (103,\ 58,\ 255),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (205,\ 58,\ 255),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (255,\ 76,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (255,\ 133,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (255,\ 153,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (255,\ 215,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (162,\ 255,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (100,\ 255,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (67,\ 255,\ 58),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (58,\ 255,\ 180),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ (58,\ 167,\ 255),}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Other/Color\+Lerp.\+cs\end{DoxyCompactItemize}

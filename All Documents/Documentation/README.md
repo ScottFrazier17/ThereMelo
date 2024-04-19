@@ -1,0 +1,1 @@
+In order to view the html documentation just open the index.html

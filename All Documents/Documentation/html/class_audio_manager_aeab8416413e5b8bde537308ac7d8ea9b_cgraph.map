@@ -1,0 +1,5 @@
+<map id="AudioManager.FFTAnalysis" name="AudioManager.FFTAnalysis">
+<area shape="rect" id="Node000001" title="Performs FFT analysis to detect frequency and amplitude of the current audio." alt="" coords="5,5,186,31"/>
+<area shape="rect" id="Node000002" href="$class_audio_manager.html#a3ccaaea181d9c6797198e21aabc653d3" title="Determines the musical note corresponding to a given frequency." alt="" coords="234,5,387,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,16,218,16,218,21,186,21"/>
+</map>

@@ -1,0 +1,347 @@
+\doxysection{Audio\+Manager Class Reference}
+\hypertarget{class_audio_manager}{}\label{class_audio_manager}\index{AudioManager@{AudioManager}}
+
+
+This class is used to manage calculate and.  
+
+
+
+
+Inheritance diagram for Audio\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_audio_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_audio_manager_a9fea2fbe44e0383a0a52a76df565f8fe}\label{class_audio_manager_a9fea2fbe44e0383a0a52a76df565f8fe} 
+float {\bfseries get\+Magnitude} ()
+\item 
+\Hypertarget{class_audio_manager_abf208e7507f4e065a3faa9fbc83a3f77}\label{class_audio_manager_abf208e7507f4e065a3faa9fbc83a3f77} 
+float {\bfseries get\+Freq} ()
+\item 
+void \mbox{\hyperlink{class_audio_manager_ae15d1b8d2b2b3f8156f9aa6353369339}{Play\+One\+Shot}} (Event\+Reference sound, Vector3 world\+Pos)
+\begin{DoxyCompactList}\small\item\em Plays an audio clip once at a specified position in the world. \end{DoxyCompactList}\item 
+Event\+Instance \mbox{\hyperlink{class_audio_manager_afab79fc31aa1fd35cbeeb787442cd9cc}{Play\+Constaint}} (Event\+Reference sound, Vector3 world\+Pos)
+\begin{DoxyCompactList}\small\item\em Creates and plays an audio event continuously at a specified position in the world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_audio_manager_af9fbb0ff40d5dff65d76aaa9ed6c1249}\label{class_audio_manager_af9fbb0ff40d5dff65d76aaa9ed6c1249} 
+Game\+Object {\bfseries hand\+Management}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} \mbox{\hyperlink{class_audio_manager_a22b1b1a94ee423ccb2b142b4f5a70ad4}{instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Single instance of \doxylink{class_audio_manager}{Audio\+Manager} to manage audio across the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the \doxylink{class_audio_manager}{Audio\+Manager} instance and sets up audio analysis tools. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_a220892c97c3955571e2408733a917dbc}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Updates audio analysis and visualizer based on current audio playback state. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_audio_manager_aec6c5c676958ecb69927977a527d3334}{FFTAnalysis\+Coroutine}} ()
+\begin{DoxyCompactList}\small\item\em Coroutine to perform FFT analysis at set intervals. \end{DoxyCompactList}\item 
+Unity\+Engine.\+Color \mbox{\hyperlink{class_audio_manager_a633c91849b613824fb1b1db7fb60d628}{Convert\+Color}} ((int, int, int) color\+Tuple)
+\begin{DoxyCompactList}\small\item\em Converts a color tuple to a Unity\+Engine.\+Color. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_audio_manager_a3ccaaea181d9c6797198e21aabc653d3}{get\+Note}} (float freq)
+\begin{DoxyCompactList}\small\item\em Determines the musical note corresponding to a given frequency. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_manager_aeab8416413e5b8bde537308ac7d8ea9b}{FFTAnalysis}} ()
+\begin{DoxyCompactList}\small\item\em Performs FFT analysis to detect frequency and amplitude of the current audio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Channel\+Group \mbox{\hyperlink{class_audio_manager_a9435da352cde969645920474279a1402}{channel\+Group}}
+\begin{DoxyCompactList}\small\item\em Group of channels for managing audio playback. \end{DoxyCompactList}\item 
+DSP \mbox{\hyperlink{class_audio_manager_ad5776d1cb77f8b3ce82c4e71062f1df6}{fft\+Dsp}}
+\begin{DoxyCompactList}\small\item\em Digital Signal Processing (DSP) unit for performing Fast Fourier Transform (FFT) analysis. \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_manager_aa900199a0c3fec518eea37097c24a89e}\label{class_audio_manager_aa900199a0c3fec518eea37097c24a89e} 
+float {\bfseries yield\+Freq} = 3f
+\item 
+\Hypertarget{class_audio_manager_aadd93763743361d83ea43820c374c5d8}\label{class_audio_manager_aadd93763743361d83ea43820c374c5d8} 
+Coroutine {\bfseries thread} = null
+\item 
+bool \mbox{\hyperlink{class_audio_manager_ad75a2b4f215dc601b84984c7e5f28d7f}{was\+Playing}} = false
+\begin{DoxyCompactList}\small\item\em Flag to track if audio was playing in the previous frame. \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_manager_ae5375f8bde07255c0778c58164990dc8}\label{class_audio_manager_ae5375f8bde07255c0778c58164990dc8} 
+\mbox{\hyperlink{class_hand_manager}{Hand\+Manager}} {\bfseries script}
+\item 
+\Hypertarget{class_audio_manager_ac0ea427019030d58c4c73981b2b8961c}\label{class_audio_manager_ac0ea427019030d58c4c73981b2b8961c} 
+float {\bfseries curr\+Magnitude} = 0f
+\item 
+\Hypertarget{class_audio_manager_acf98b7b6f726688bfa1e586b4af07c24}\label{class_audio_manager_acf98b7b6f726688bfa1e586b4af07c24} 
+float\mbox{[}$\,$\mbox{]} {\bfseries spectrum} = new float\mbox{[}512\mbox{]}
+\item 
+\Hypertarget{class_audio_manager_aa9e16f23539a145f90e2270f3c25c208}\label{class_audio_manager_aa9e16f23539a145f90e2270f3c25c208} 
+float {\bfseries frequency}
+\item 
+\Hypertarget{class_audio_manager_abe9d6fc908bd7b23f251d8ba3b0aa77e}\label{class_audio_manager_abe9d6fc908bd7b23f251d8ba3b0aa77e} 
+float {\bfseries cur\+Freq}
+\item 
+\Hypertarget{class_audio_manager_ac3fb4bb05dfbe369aa2a22e4f04fc872}\label{class_audio_manager_ac3fb4bb05dfbe369aa2a22e4f04fc872} 
+string {\bfseries note}
+\item 
+Line\+Renderer \mbox{\hyperlink{class_audio_manager_a32b2cb99e8486c046245ed916142075b}{line\+Renderer}}
+\begin{DoxyCompactList}\small\item\em Renderer to visualize audio data. \end{DoxyCompactList}\item 
+\Hypertarget{class_audio_manager_aa95d1e3b5e81916d24f08338d6205705}\label{class_audio_manager_aa95d1e3b5e81916d24f08338d6205705} 
+int {\bfseries points} = 25
+\item 
+\Hypertarget{class_audio_manager_a10edf2ab96102edd0fb5d2ef2fb89ced}\label{class_audio_manager_a10edf2ab96102edd0fb5d2ef2fb89ced} 
+float {\bfseries length} = 5f
+\item 
+\Hypertarget{class_audio_manager_afceff549f9eac765dbcc1a2a186ddbf9}\label{class_audio_manager_afceff549f9eac765dbcc1a2a186ddbf9} 
+float {\bfseries l\+Width} = 0.\+025f
+\item 
+\Hypertarget{class_audio_manager_acac0786fbd80d7fe40e4833b2d410bba}\label{class_audio_manager_acac0786fbd80d7fe40e4833b2d410bba} 
+float {\bfseries phase}
+\item 
+\Hypertarget{class_audio_manager_a4ffd8a05137813f503c6945a43e58dbb}\label{class_audio_manager_a4ffd8a05137813f503c6945a43e58dbb} 
+float {\bfseries speed} = 1f
+\item 
+\Hypertarget{class_audio_manager_af9b28c479a0a5b98dc90ca34318cd908}\label{class_audio_manager_af9b28c479a0a5b98dc90ca34318cd908} 
+string\mbox{[}$\,$\mbox{]} {\bfseries NOTES} = \{ "{}A"{}, "{}A\#"{}, "{}B"{}, "{}C"{}, "{}C\#"{}, "{}D"{}, "{}D\#"{}, "{}E"{}, "{}F"{}, "{}F\#"{}, "{}G"{}, "{}G\#"{} \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class is used to manage calculate and. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7}\label{class_audio_manager_a631d7d42b921bcbd82bd1baec2ec3ea7} 
+\index{AudioManager@{AudioManager}!Awake@{Awake}}
+\index{Awake@{Awake}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes the \doxylink{class_audio_manager}{Audio\+Manager} instance and sets up audio analysis tools. 
+
+\Hypertarget{class_audio_manager_a633c91849b613824fb1b1db7fb60d628}\label{class_audio_manager_a633c91849b613824fb1b1db7fb60d628} 
+\index{AudioManager@{AudioManager}!ConvertColor@{ConvertColor}}
+\index{ConvertColor@{ConvertColor}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{ConvertColor()}{ConvertColor()}}
+{\footnotesize\ttfamily Unity\+Engine.\+Color Audio\+Manager.\+Convert\+Color (\begin{DoxyParamCaption}\item[{(int, int, int)}]{color\+Tuple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Converts a color tuple to a Unity\+Engine.\+Color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em color\+Tuple} & Tuple representing the RGB values of the color. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Converted Unity\+Engine.\+Color. 
+\end{DoxyReturn}
+\Hypertarget{class_audio_manager_aeab8416413e5b8bde537308ac7d8ea9b}\label{class_audio_manager_aeab8416413e5b8bde537308ac7d8ea9b} 
+\index{AudioManager@{AudioManager}!FFTAnalysis@{FFTAnalysis}}
+\index{FFTAnalysis@{FFTAnalysis}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{FFTAnalysis()}{FFTAnalysis()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+FFTAnalysis (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Performs FFT analysis to detect frequency and amplitude of the current audio. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_aeab8416413e5b8bde537308ac7d8ea9b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_aeab8416413e5b8bde537308ac7d8ea9b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_aec6c5c676958ecb69927977a527d3334}\label{class_audio_manager_aec6c5c676958ecb69927977a527d3334} 
+\index{AudioManager@{AudioManager}!FFTAnalysisCoroutine@{FFTAnalysisCoroutine}}
+\index{FFTAnalysisCoroutine@{FFTAnalysisCoroutine}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{FFTAnalysisCoroutine()}{FFTAnalysisCoroutine()}}
+{\footnotesize\ttfamily IEnumerator Audio\+Manager.\+FFTAnalysis\+Coroutine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Coroutine to perform FFT analysis at set intervals. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_aec6c5c676958ecb69927977a527d3334_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_aec6c5c676958ecb69927977a527d3334_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_a3ccaaea181d9c6797198e21aabc653d3}\label{class_audio_manager_a3ccaaea181d9c6797198e21aabc653d3} 
+\index{AudioManager@{AudioManager}!getNote@{getNote}}
+\index{getNote@{getNote}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{getNote()}{getNote()}}
+{\footnotesize\ttfamily string Audio\+Manager.\+get\+Note (\begin{DoxyParamCaption}\item[{float}]{freq }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Determines the musical note corresponding to a given frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em freq} & Frequency to determine the note for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String representing the musical note. 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_a3ccaaea181d9c6797198e21aabc653d3_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_manager_afab79fc31aa1fd35cbeeb787442cd9cc}\label{class_audio_manager_afab79fc31aa1fd35cbeeb787442cd9cc} 
+\index{AudioManager@{AudioManager}!PlayConstaint@{PlayConstaint}}
+\index{PlayConstaint@{PlayConstaint}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayConstaint()}{PlayConstaint()}}
+{\footnotesize\ttfamily Event\+Instance Audio\+Manager.\+Play\+Constaint (\begin{DoxyParamCaption}\item[{Event\+Reference}]{sound,  }\item[{Vector3}]{world\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates and plays an audio event continuously at a specified position in the world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound} & Reference to the FMOD event to play. \\
+\hline
+{\em world\+Pos} & World position to play the sound at. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The Event\+Instance of the playing sound for further manipulation. 
+\end{DoxyReturn}
+\Hypertarget{class_audio_manager_ae15d1b8d2b2b3f8156f9aa6353369339}\label{class_audio_manager_ae15d1b8d2b2b3f8156f9aa6353369339} 
+\index{AudioManager@{AudioManager}!PlayOneShot@{PlayOneShot}}
+\index{PlayOneShot@{PlayOneShot}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{PlayOneShot()}{PlayOneShot()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Play\+One\+Shot (\begin{DoxyParamCaption}\item[{Event\+Reference}]{sound,  }\item[{Vector3}]{world\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plays an audio clip once at a specified position in the world. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sound} & Reference to the FMOD event to play. \\
+\hline
+{\em world\+Pos} & World position to play the sound at. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_audio_manager_a220892c97c3955571e2408733a917dbc}\label{class_audio_manager_a220892c97c3955571e2408733a917dbc} 
+\index{AudioManager@{AudioManager}!Update@{Update}}
+\index{Update@{Update}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily void Audio\+Manager.\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Updates audio analysis and visualizer based on current audio playback state. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_manager_a220892c97c3955571e2408733a917dbc_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_audio_manager_a9435da352cde969645920474279a1402}\label{class_audio_manager_a9435da352cde969645920474279a1402} 
+\index{AudioManager@{AudioManager}!channelGroup@{channelGroup}}
+\index{channelGroup@{channelGroup}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{channelGroup}{channelGroup}}
+{\footnotesize\ttfamily Channel\+Group Audio\+Manager.\+channel\+Group\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Group of channels for managing audio playback. 
+
+\Hypertarget{class_audio_manager_ad5776d1cb77f8b3ce82c4e71062f1df6}\label{class_audio_manager_ad5776d1cb77f8b3ce82c4e71062f1df6} 
+\index{AudioManager@{AudioManager}!fftDsp@{fftDsp}}
+\index{fftDsp@{fftDsp}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{fftDsp}{fftDsp}}
+{\footnotesize\ttfamily DSP Audio\+Manager.\+fft\+Dsp\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Digital Signal Processing (DSP) unit for performing Fast Fourier Transform (FFT) analysis. 
+
+\Hypertarget{class_audio_manager_a32b2cb99e8486c046245ed916142075b}\label{class_audio_manager_a32b2cb99e8486c046245ed916142075b} 
+\index{AudioManager@{AudioManager}!lineRenderer@{lineRenderer}}
+\index{lineRenderer@{lineRenderer}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{lineRenderer}{lineRenderer}}
+{\footnotesize\ttfamily Line\+Renderer Audio\+Manager.\+line\+Renderer\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Renderer to visualize audio data. 
+
+\Hypertarget{class_audio_manager_ad75a2b4f215dc601b84984c7e5f28d7f}\label{class_audio_manager_ad75a2b4f215dc601b84984c7e5f28d7f} 
+\index{AudioManager@{AudioManager}!wasPlaying@{wasPlaying}}
+\index{wasPlaying@{wasPlaying}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{wasPlaying}{wasPlaying}}
+{\footnotesize\ttfamily bool Audio\+Manager.\+was\+Playing = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Flag to track if audio was playing in the previous frame. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_audio_manager_a22b1b1a94ee423ccb2b142b4f5a70ad4}\label{class_audio_manager_a22b1b1a94ee423ccb2b142b4f5a70ad4} 
+\index{AudioManager@{AudioManager}!instance@{instance}}
+\index{instance@{instance}!AudioManager@{AudioManager}}
+\doxysubsubsection{\texorpdfstring{instance}{instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_audio_manager}{Audio\+Manager}} Audio\+Manager.\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [private set]}}
+
+
+
+Single instance of \doxylink{class_audio_manager}{Audio\+Manager} to manage audio across the scene. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Audio/Audio\+Manager.\+cs\end{DoxyCompactItemize}

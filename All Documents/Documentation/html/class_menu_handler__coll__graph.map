@@ -1,0 +1,29 @@
+<map id="MenuHandler" name="MenuHandler">
+<area shape="rect" id="Node000001" title="Manages the appearance and disappearance of a menu through animation and audio feedback." alt="" coords="848,228,946,253"/>
+<area shape="rect" id="Node000002" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="65,46,74,82,82,99,95,113,161,161,224,189,284,202,345,204,478,195,554,194,640,201,848,230,847,235,639,206,554,199,478,200,345,209,284,207,222,194,159,166,91,117,78,102,69,83,60,47"/>
+<area shape="rect" id="Node000007" href="$class_hand_manager.html" title="Manages hand interactions for ThereMelo, handling input from Leap Motion to control audio parameters." alt="" coords="394,139,496,165"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="83,40,126,78,152,97,181,113,235,131,292,142,394,149,393,154,292,147,234,136,179,117,149,102,122,83,80,44"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="864,139,930,165"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="900,180,900,227,894,227,894,180"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="954,139,1032,165"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="970,177,912,229,908,225,967,173"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="757,5,803,31"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="797,44,802,54,812,85,815,110,820,135,832,163,858,199,885,226,881,229,854,202,827,166,815,136,810,111,806,86,797,56,792,46"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="756,44,745,57,736,73,732,88,727,103,713,117,674,133,617,143,497,152,496,147,616,137,673,127,710,113,722,100,727,87,731,71,740,53,752,40"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="1055,139,1123,165"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="1073,179,1041,206,994,226,947,236,946,231,992,220,1038,201,1069,174"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="511,163,848,227,847,232,510,168"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="140,5,238,31"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="187,46,189,82,194,99,204,113,217,122,235,129,284,139,393,147,393,153,283,144,233,134,214,126,200,117,190,101,184,83,182,47"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="268,5,313,31"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="287,46,286,81,290,98,299,113,313,123,336,131,394,142,393,147,335,136,311,127,295,117,285,100,281,82,282,46"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="356,5,409,31"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="383,46,386,80,398,114,409,126,422,136,419,141,405,130,393,116,381,81,378,47"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="433,5,567,31"/>
+<area shape="poly" id="edge12_Node000007_Node000011" title=" " alt="" coords="492,46,463,116,453,140,448,138,459,114,487,44"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="601,5,695,31"/>
+<area shape="poly" id="edge13_Node000007_Node000012" title=" " alt="" coords="649,47,641,83,633,101,620,117,599,128,568,137,497,148,496,143,567,132,597,123,617,113,628,99,636,82,644,46"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1147,139,1263,165"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1185,177,1165,193,1142,206,1092,223,1040,234,947,242,946,237,1039,229,1090,218,1140,201,1162,189,1181,173"/>
+</map>

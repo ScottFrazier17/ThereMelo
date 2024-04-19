@@ -1,0 +1,210 @@
+\doxysection{Audio\+Handler Class Reference}
+\hypertarget{class_audio_handler}{}\label{class_audio_handler}\index{AudioHandler@{AudioHandler}}
+
+
+Handles audio playback and effects for a virtual music instrument in There\+Melo.  
+
+
+
+
+Inheritance diagram for Audio\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=164pt]{class_audio_handler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Audio\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_handler_adb77679e9ece23e55816f8457883742e}{Play\+Audio\+Once}} ()
+\begin{DoxyCompactList}\small\item\em Plays the trigger sound once at the source\textquotesingle{}s current position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_handler_a2d92a46950d1f911c05c78684291492d}{Play\+Audio\+Constant}} ()
+\begin{DoxyCompactList}\small\item\em Starts playing the trigger sound continuously. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_handler_a5ca2937c7faaceca554229bd57ceee18}{Play\+For\+Amount}} (float set\+Time)
+\begin{DoxyCompactList}\small\item\em Plays the trigger sound continuously for a specified amount of time. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_audio_handler_abcc56240e8afec00ce1458049b812bf7}{Stop\+Audio}} ()
+\begin{DoxyCompactList}\small\item\em Stops the currently playing audio with a fade out. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_audio_handler_a3cf5a8e68efc875d716746b2b993f656}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the audio source to the main camera if not set. \end{DoxyCompactList}\item 
+IEnumerator \mbox{\hyperlink{class_audio_handler_a38c1cbc25ea4a86266eaeb5c8d5d9765}{Stop\+Sound\+After\+Delay}} (float delay)
+\begin{DoxyCompactList}\small\item\em Coroutine to stop sound after a specified delay. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Event\+Reference \mbox{\hyperlink{class_audio_handler_adcbc88db1053ee22706835a4c0379d42}{trigger\+Sound}}
+\begin{DoxyCompactList}\small\item\em Reference to the FMOD event for the trigger sound. \end{DoxyCompactList}\item 
+Game\+Object \mbox{\hyperlink{class_audio_handler_ade2e259d79716af0cc380043e5b14731}{source}}
+\begin{DoxyCompactList}\small\item\em Game\+Object that acts as the source of the sound. \end{DoxyCompactList}\item 
+Event\+Instance \mbox{\hyperlink{class_audio_handler_a679c59dbbcf933776d2075948add1f15}{event\+Instance}}
+\begin{DoxyCompactList}\small\item\em Instance of an FMOD event. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Handles audio playback and effects for a virtual music instrument in There\+Melo. 
+
+This class is used to manipulate audio wheher it be to play or stop playing audio. This class is used by others inorder to trigger audio feedback. See the diagram for full details on these interations 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_audio_handler_a3cf5a8e68efc875d716746b2b993f656}\label{class_audio_handler_a3cf5a8e68efc875d716746b2b993f656} 
+\index{AudioHandler@{AudioHandler}!Awake@{Awake}}
+\index{Awake@{Awake}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily void Audio\+Handler.\+Awake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initializes the audio source to the main camera if not set. 
+
+\Hypertarget{class_audio_handler_a2d92a46950d1f911c05c78684291492d}\label{class_audio_handler_a2d92a46950d1f911c05c78684291492d} 
+\index{AudioHandler@{AudioHandler}!PlayAudioConstant@{PlayAudioConstant}}
+\index{PlayAudioConstant@{PlayAudioConstant}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{PlayAudioConstant()}{PlayAudioConstant()}}
+{\footnotesize\ttfamily void Audio\+Handler.\+Play\+Audio\+Constant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Starts playing the trigger sound continuously. 
+
+Stops the current audio if it is already playing before starting the new audio playback. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler_a2d92a46950d1f911c05c78684291492d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_handler_adb77679e9ece23e55816f8457883742e}\label{class_audio_handler_adb77679e9ece23e55816f8457883742e} 
+\index{AudioHandler@{AudioHandler}!PlayAudioOnce@{PlayAudioOnce}}
+\index{PlayAudioOnce@{PlayAudioOnce}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{PlayAudioOnce()}{PlayAudioOnce()}}
+{\footnotesize\ttfamily void Audio\+Handler.\+Play\+Audio\+Once (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plays the trigger sound once at the source\textquotesingle{}s current position. 
+
+\Hypertarget{class_audio_handler_a5ca2937c7faaceca554229bd57ceee18}\label{class_audio_handler_a5ca2937c7faaceca554229bd57ceee18} 
+\index{AudioHandler@{AudioHandler}!PlayForAmount@{PlayForAmount}}
+\index{PlayForAmount@{PlayForAmount}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{PlayForAmount()}{PlayForAmount()}}
+{\footnotesize\ttfamily void Audio\+Handler.\+Play\+For\+Amount (\begin{DoxyParamCaption}\item[{float}]{set\+Time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Plays the trigger sound continuously for a specified amount of time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Time} & The duration in seconds to play the sound for. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler_a5ca2937c7faaceca554229bd57ceee18_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_handler_abcc56240e8afec00ce1458049b812bf7}\label{class_audio_handler_abcc56240e8afec00ce1458049b812bf7} 
+\index{AudioHandler@{AudioHandler}!StopAudio@{StopAudio}}
+\index{StopAudio@{StopAudio}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{StopAudio()}{StopAudio()}}
+{\footnotesize\ttfamily void Audio\+Handler.\+Stop\+Audio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Stops the currently playing audio with a fade out. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler_abcc56240e8afec00ce1458049b812bf7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{class_audio_handler_a38c1cbc25ea4a86266eaeb5c8d5d9765}\label{class_audio_handler_a38c1cbc25ea4a86266eaeb5c8d5d9765} 
+\index{AudioHandler@{AudioHandler}!StopSoundAfterDelay@{StopSoundAfterDelay}}
+\index{StopSoundAfterDelay@{StopSoundAfterDelay}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{StopSoundAfterDelay()}{StopSoundAfterDelay()}}
+{\footnotesize\ttfamily IEnumerator Audio\+Handler.\+Stop\+Sound\+After\+Delay (\begin{DoxyParamCaption}\item[{float}]{delay }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Coroutine to stop sound after a specified delay. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em delay} & The delay in seconds before stopping the sound. \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler_a38c1cbc25ea4a86266eaeb5c8d5d9765_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_audio_handler_a38c1cbc25ea4a86266eaeb5c8d5d9765_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_audio_handler_a679c59dbbcf933776d2075948add1f15}\label{class_audio_handler_a679c59dbbcf933776d2075948add1f15} 
+\index{AudioHandler@{AudioHandler}!eventInstance@{eventInstance}}
+\index{eventInstance@{eventInstance}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{eventInstance}{eventInstance}}
+{\footnotesize\ttfamily Event\+Instance Audio\+Handler.\+event\+Instance\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Instance of an FMOD event. 
+
+\Hypertarget{class_audio_handler_ade2e259d79716af0cc380043e5b14731}\label{class_audio_handler_ade2e259d79716af0cc380043e5b14731} 
+\index{AudioHandler@{AudioHandler}!source@{source}}
+\index{source@{source}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{source}{source}}
+{\footnotesize\ttfamily Game\+Object Audio\+Handler.\+source\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Game\+Object that acts as the source of the sound. 
+
+\Hypertarget{class_audio_handler_adcbc88db1053ee22706835a4c0379d42}\label{class_audio_handler_adcbc88db1053ee22706835a4c0379d42} 
+\index{AudioHandler@{AudioHandler}!triggerSound@{triggerSound}}
+\index{triggerSound@{triggerSound}!AudioHandler@{AudioHandler}}
+\doxysubsubsection{\texorpdfstring{triggerSound}{triggerSound}}
+{\footnotesize\ttfamily Event\+Reference Audio\+Handler.\+trigger\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Reference to the FMOD event for the trigger sound. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Audio/Audio\+Handler.\+cs\end{DoxyCompactItemize}
