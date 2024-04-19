@@ -1,5 +1,0 @@
-<map id="MenuHandler.Shrink" name="MenuHandler.Shrink">
-<area shape="rect" id="Node000001" title="Coroutine to animate the menu shrinking to disappear." alt="" coords="5,5,144,31"/>
-<area shape="rect" id="Node000002" href="$class_menu_handler.html#abdca025a29c82793e31ae41efb0b4ed7" title="Easing function for the animation, creating a smooth start effect." alt="" coords="192,5,358,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,16,176,16,176,21,144,21"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="UserPrefs.setHand" name="UserPrefs.setHand">
-<area shape="rect" id="Node000001" title="Sets the user&#39;s hand dominance, updating UI elements and interaction anchors accordingly." alt="" coords="5,5,139,31"/>
-<area shape="rect" id="Node000002" href="$class_user_prefs.html#ac6495463b48a93650f4a958707ad0315" title="Swaps the positions of the rod and pad based on the user&#39;s hand dominance." alt="" coords="187,5,350,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,16,171,16,171,21,139,21"/>
-</map>

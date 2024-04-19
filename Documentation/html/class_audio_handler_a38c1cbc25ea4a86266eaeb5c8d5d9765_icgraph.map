@@ -1,5 +1,0 @@
-<map id="AudioHandler.StopSoundAfterDelay" name="AudioHandler.StopSoundAfterDelay">
-<area shape="rect" id="Node000001" title="Coroutine to stop sound after a specified delay." alt="" coords="246,5,440,46"/>
-<area shape="rect" id="Node000002" href="$class_audio_handler.html#a5ca2937c7faaceca554229bd57ceee18" title="Plays the trigger sound continuously for a specified amount of time." alt="" coords="5,13,198,39"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,28,198,28,198,23,230,23"/>
-</map>
