@@ -67,7 +67,7 @@ namespace FMODUnity
 
         public void ChangeEvent(string newEvent)
         {
-            EventReference = EventReference.Find(newEvent);
+            EventReference = FMODUnity.RuntimeManager.PathToEventReference(newEvent);
             Stop();
             Lookup();
         }

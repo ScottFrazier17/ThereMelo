@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Leap-main.unity
+    guid: 291159459c41c60459655e02f2537061
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 29e84dbb48553d447b33a8f366b6df26, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 4792f9f0508ca9c46b00be14781fe358, type: 2}
