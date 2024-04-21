@@ -1,7 +1,0 @@
-<map id="HandManager.OnUpdateFrame" name="HandManager.OnUpdateFrame">
-<area shape="rect" id="Node000001" title="Processes hand data each frame to control audio playback and parameters based on hand position and mo..." alt="" coords="5,31,207,56"/>
-<area shape="rect" id="Node000002" href="$class_hand_manager.html#a408fdb8eb74980b52decf7f450e6f6ea" title="Calculates the closest distance from the hand to a target object." alt="" coords="255,5,429,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="207,30,239,27,239,32,208,35"/>
-<area shape="rect" id="Node000003" href="$class_hand_manager.html#ac7a5904937ee235ccaa63511b9ecb851" title="Checks if the audio is currently playing." alt="" coords="262,55,422,80"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="208,51,247,55,246,60,207,56"/>
-</map>

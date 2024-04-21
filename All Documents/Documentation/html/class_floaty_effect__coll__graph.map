@@ -1,9 +1,0 @@
-<map id="FloatyEffect" name="FloatyEffect">
-<area shape="rect" id="Node000001" title="Creates a floating effect on the GameObject to which it&#39;s attached by periodically adjusting its vert..." alt="" coords="118,139,210,165"/>
-<area shape="rect" id="Node000002" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="82,42,156,137,152,140,78,45"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="141,5,187,31"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="166,47,166,138,161,138,161,47"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="240,5,306,31"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="273,47,265,82,257,100,246,117,229,131,210,141,207,136,226,126,242,113,252,98,260,81,268,46"/>
-</map>
